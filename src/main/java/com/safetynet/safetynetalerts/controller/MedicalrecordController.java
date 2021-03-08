@@ -1,6 +1,6 @@
 package com.safetynet.safetynetalerts.controller;
 
-import com.safetynet.safetynetalerts.model.Firestation;
+
 import com.safetynet.safetynetalerts.model.Medicalrecord;
 import com.safetynet.safetynetalerts.service.MedicalrecordService;
 import org.springframework.beans.factory.annotation.Autowired;

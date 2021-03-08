@@ -17,7 +17,7 @@ public class MedicalrecordService {
     private static Logger logger = LoggerFactory.getLogger(MedicalrecordRepository.class);
 
     @Autowired
-    MedicalrecordRepository medicalrecordRepository;
+    private MedicalrecordRepository medicalrecordRepository;
 
     public Optional<Medicalrecord> getMedicalrecord(final Long id){
         return medicalrecordRepository.findById(id);

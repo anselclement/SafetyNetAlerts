@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MedicalrecordController {
 
     @Autowired
-    MedicalrecordService medicalrecordService;
+    private MedicalrecordService medicalrecordService;
 
     @GetMapping("/medicalrecords")
     public Iterable<Medicalrecord> getMedicalrecords() {

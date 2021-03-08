@@ -16,7 +16,7 @@ public class PersonService {
     private static Logger logger = LoggerFactory.getLogger(PersonService.class);
 
     @Autowired
-    PersonRepository personRepository;
+    private PersonRepository personRepository;
 
     public Optional<Person> getPerson(final Long id){
         return personRepository.findById(id);

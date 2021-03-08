@@ -22,7 +22,9 @@ public class Medicalrecord {
 
     private String birthdate;
 
+    @ElementCollection
     private List<String> medications;
 
+    @ElementCollection
     private List<String> allergies;
 }

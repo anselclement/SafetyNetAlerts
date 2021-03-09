@@ -27,6 +27,7 @@ public class FirestationDAO {
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
                 Firestation firestation = new Firestation();
+                firestation.setId(rs.getLong("id"));
                 firestation.setAddress(rs.getNString("address"));
                 firestation.setStation(rs.getString("station"));
                 firestations.add(firestation);

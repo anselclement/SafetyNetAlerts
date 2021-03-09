@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SafetyNetAlerts</title>
+</head>
+<body>
+    <h2 class="h1">Bienvenue sur l'application de SafetyNet Alerts !</h2>
+
+    <h2 class="h2">Liste des Personnes</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${persons.empty}">
+            <td colspan="3">Aucun employée en base de données</td>
+        </tr>
+        <tr th:each="person: ${persons}">
+            <td><span th:text="${person.firstName}"> Prénom </span></td>
+            <td><span th:text="${person.lastName}"> Nom </span></td>
+        </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>

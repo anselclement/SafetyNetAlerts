@@ -1,6 +1,7 @@
 package com.safetynet.safetynetalerts;
 
 import com.safetynet.safetynetalerts.config.JSONReader;
+import com.safetynet.safetynetalerts.dao.FirestationDAO;
 import com.safetynet.safetynetalerts.dao.PersonDAO;
 import com.safetynet.safetynetalerts.model.DataContainer;
 import com.safetynet.safetynetalerts.service.FirestationService;
@@ -29,9 +30,11 @@ public class SafetynetalertsApplication {
 		DataContainer dataContainer = jsonReader.readJSON();
 
 		PersonDAO personDAO = new PersonDAO();
+		FirestationDAO firestationDAO = new FirestationDAO();
 
-		if(personDAO.getPersons().isEmpty()) {
+		if(personDAO.getPersons().isEmpty() && firestationDAO.getFireStations().isEmpty()) {
 			personService.save(dataContainer.getPersons());
+			firestationService.save(dataContainer.getFirestations());
 		}
 	}
 

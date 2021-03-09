@@ -16,7 +16,7 @@ public class FirestationService {
     private static Logger logger = LoggerFactory.getLogger(FirestationRepository.class);
 
     @Autowired
-    FirestationRepository firestationRepository;
+    private FirestationRepository firestationRepository;
 
     public Optional<Firestation> getFirestation(final Long id){
         return firestationRepository.findById(id);

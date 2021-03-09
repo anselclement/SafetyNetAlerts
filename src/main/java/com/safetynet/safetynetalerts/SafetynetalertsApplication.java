@@ -17,13 +17,13 @@ import org.springframework.context.annotation.Bean;
 public class SafetynetalertsApplication {
 
 	@Autowired
-	PersonService personService;
+	private PersonService personService;
 
 	@Autowired
-	FirestationService firestationService;
+	private FirestationService firestationService;
 
 	@Autowired
-	MedicalrecordService medicalrecordService;
+	private MedicalrecordService medicalrecordService;
 
 	@Bean
 	public void loadModel(){

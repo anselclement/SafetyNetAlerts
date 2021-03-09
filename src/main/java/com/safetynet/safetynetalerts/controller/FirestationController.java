@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class FirestationController {
 
     @Autowired
-    FirestationService firestationService;
+    private FirestationService firestationService;
 
     @GetMapping("/firestations")
     public Iterable<Firestation> getFirestations() {

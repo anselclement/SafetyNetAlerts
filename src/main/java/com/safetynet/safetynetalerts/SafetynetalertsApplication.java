@@ -1,6 +1,7 @@
 package com.safetynet.safetynetalerts;
 
 import com.safetynet.safetynetalerts.config.JSONReader;
+import com.safetynet.safetynetalerts.dao.PersonDAO;
 import com.safetynet.safetynetalerts.model.DataContainer;
 import com.safetynet.safetynetalerts.service.FirestationService;
 import com.safetynet.safetynetalerts.service.MedicalrecordService;
@@ -23,15 +24,15 @@ public class SafetynetalertsApplication {
 	MedicalrecordService medicalrecordService;
 
 	@Bean
-	public DataContainer loadModel(){
+	public void loadModel(){
 		JSONReader jsonReader = new JSONReader();
 		DataContainer dataContainer = jsonReader.readJSON();
 
-		personService.save(dataContainer.getPersons());
-		firestationService.save(dataContainer.getFirestations());
-		medicalrecordService.save(dataContainer.getMedicalrecords());
+		PersonDAO personDAO = new PersonDAO();
 
-		return jsonReader.readJSON();
+		if(personDAO.getPersons().isEmpty()) {
+			personService.save(dataContainer.getPersons());
+		}
 	}
 
 	public static void main(String[] args) {

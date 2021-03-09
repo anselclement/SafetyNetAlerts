@@ -2,7 +2,6 @@ package com.safetynet.safetynetalerts;
 
 import com.safetynet.safetynetalerts.config.JSONReader;
 import com.safetynet.safetynetalerts.model.DataContainer;
-import com.safetynet.safetynetalerts.model.Firestation;
 import com.safetynet.safetynetalerts.service.FirestationService;
 import com.safetynet.safetynetalerts.service.MedicalrecordService;
 import com.safetynet.safetynetalerts.service.PersonService;

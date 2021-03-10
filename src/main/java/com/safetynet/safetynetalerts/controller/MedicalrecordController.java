@@ -13,7 +13,7 @@ public class MedicalrecordController {
     @Autowired
     private MedicalrecordService medicalrecordService;
 
-    @GetMapping("/medicalrecords")
+    @GetMapping("/medicalrecord")
     public Iterable<Medicalrecord> getMedicalrecords(Model model) {
 
         Iterable<Medicalrecord> ListMedicalrecords = medicalrecordService.getMedicalrecords();

@@ -14,7 +14,7 @@ public class FirestationController {
     @Autowired
     private FirestationService firestationService;
 
-    @GetMapping("/firestations")
+    @GetMapping("/firestation")
     public Iterable<Firestation> getFirestations(Model model) {
 
         Iterable<Firestation> listFireStations = firestationService.getFirestations();

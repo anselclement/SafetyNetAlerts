@@ -14,7 +14,7 @@ public class PersonController {
     @Autowired
     private PersonService personService;
 
-    @GetMapping("/persons")
+    @GetMapping("/person")
     public Iterable<Person> getPersons(Model model) {
 
         Iterable<Person> listPersons = personService.getPersons();

@@ -17,16 +17,21 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:if="${firestations.empty}">
-                <td colspan="3">Aucune caserne en base de données</td>
-            </tr>
-            <tr th:each="firestation: ${firestations}">
-                <td><span th:text="${firestation.address}"> Adresse </span></td>
-                <td><span th:text="${firestation.station}"> Numéro de station </span></td>
-            </tr>
+                <tr th:if="${firestations.empty}">
+                    <td colspan="3">Aucune caserne en base de données</td>
+                </tr>
+                <tr th:each="firestation: ${firestations}">
+                    <td><span th:text="${firestation.address}"> Adresse </span></td>
+                    <td><span th:text="${firestation.station}"> Numéro de station </span></td>
+                    <td>
+                        <a th:href="${}"><button class="btn btn-info">Modifier</button></a>
+                        <a th:href="${}"><button class="btn btn-danger">Supprimer</button></a>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
+    <a th:href="${}">Ajouter une nouvelle caserne</a>
 </div>
 <script th:src="@{webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
 </body>

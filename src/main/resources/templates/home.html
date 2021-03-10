@@ -1,31 +1,25 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhml" xmlns:th="http://www.thymeleaf.org">
+<html lang="fr" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
     <title>SafetyNetAlerts</title>
+    <link th:href="@{webjars/bootstrap/4.3.1/css/bootstrap.min.css}" th:rel="stylesheet">
 </head>
 <body>
-    <h2 class="h1">Bienvenue sur l'application de SafetyNet Alerts !</h2>
-
-    <h2 class="h2">Liste des Personnes</h2>
-    <table>
-        <thead>
-        <tr>
-            <th>Prénom</th>
-            <th>Nom</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:if="${persons.empty}">
-            <td colspan="3">Aucun employée en base de données</td>
-        </tr>
-        <tr th:each="person: ${persons}">
-            <td><span th:text="${person.firstName}"> Prénom </span></td>
-            <td><span th:text="${person.lastName}"> Nom </span></td>
-        </tr>
-
-        </tbody>
-    </table>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href=".">Bienvenue sur l'application de SafetyNet Alerts !</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container special">
+        <h2 class="h2">Veuillez choisir une catégorie :</h2>
+        <a  th:href="@{/person}" class="btn btn-primary">Liste de personnes</a>
+        <a th:href="@{/firestation}" class="btn btn-primary">Liste des casernes</a>
+        <a th:href="@{/medicalrecord}" class="btn btn-primary">Liste des dossiers médicaux</a>
+    </div>
+    <script th:src="@{webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
 </body>
 </html>

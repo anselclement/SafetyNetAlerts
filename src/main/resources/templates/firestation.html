@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Casernes</title>
+    <link th:href="@{webjars/bootstrap/4.3.1/css/bootstrap.min.css}" th:rel="stylesheet">
+</head>
+<body>
+<div class="container special">
+    <h2 class="h2">Liste des casernes</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+            <tr>
+                <th>Adresse</th>
+                <th>Numéro de station</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr th:if="${firestations.empty}">
+                    <td colspan="3">Aucune caserne en base de données</td>
+                </tr>
+                <tr th:each="firestation: ${firestations}">
+                    <td><span th:text="${firestation.address}"> Adresse </span></td>
+                    <td><span th:text="${firestation.station}"> Numéro de station </span></td>
+                    <td>
+                        <a th:href="${}"><button class="btn btn-info">Modifier</button></a>
+                        <a th:href="${}"><button class="btn btn-danger">Supprimer</button></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <a th:href="${}">Ajouter une nouvelle caserne</a>
+</div>
+<script th:src="@{webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

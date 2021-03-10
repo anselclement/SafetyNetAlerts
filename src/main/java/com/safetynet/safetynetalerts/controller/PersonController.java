@@ -5,7 +5,10 @@ import com.safetynet.safetynetalerts.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.Optional;
 
 
 @Controller
@@ -23,4 +26,37 @@ public class PersonController {
 
         return listPersons;
     }
+
+    @GetMapping("/createPerson")
+    public String createPerson(Model model){
+        Person person = new Person();
+        model.addAttribute("person", person);
+        return "formNewPerson";
+    }
+
+    @PostMapping("/savePerson")
+    public ModelAndView savePerson(@ModelAttribute Person person){
+        personService.savePerson(person);
+        return new ModelAndView("redirect:/person");
+    }
+
+    @GetMapping("/updatePerson/{id}")
+    public String updatePerson(@PathVariable("id") final Long id, Model model){
+        Optional<Person> person = personService.getPerson(id);
+        model.addAttribute("person", person);
+        return "formUpdatePerson";
+    }
+
+    /*@GetMapping("/deletePerson/{id}")
+    public ModelAndView deletePerson(@PathVariable("id") final Long id){
+        personService.deletePerson(id);
+        return new ModelAndView("redirect:/person");
+    }*/
+
+    @GetMapping("/deletePerson/{lastName}{firstName}")
+    public ModelAndView deleteByLastnameAndFirstname(@PathVariable("lastName") String lastName, @PathVariable("firstName") String firstName){
+        personService.deleteByLastNameAndFirstName(lastName, firstName);
+        return new ModelAndView("redirect:");
+    }
+
 }

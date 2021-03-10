@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajout d'un personne</title>
+    <link th:href="@{webjars/bootstrap/4.3.1/css/bootstrap.min.css}" th:rel="stylesheet">
+</head>
+<body>
+<div class="container special">
+
+    <h2 class="h2">Ajout d'une nouvelle personne</h2>
+    <div>
+        <form method="post"
+              th:action="@{/savePerson}" th:object="${person}">
+            <div class="form-group">
+                <label for="firstNameInput">Prénom</label>
+                <input
+                        type="text" th:field="*{firstName}" class="form-control" id="firstNameInput"
+                        aria-describedby="firstNameHelp" placeholder="Saisir le prénom"> <small
+                    id="firstNameHelp" class="form-text text-muted">Merci d'écrire le prénom de la personne.</small>
+            </div>
+            <div class="form-group">
+                <label for="lastNameInput">Nom</label>
+                <input
+                        type="text" th:field="*{lastName}" class="form-control" id="lastNameInput"
+                aria-describedby="lastNameHelp" placeholder="Saisir le nom"> <small
+                    id="lastNameHelp" class="form-text text-muted">Merci d'écrire le nom de la personne.</small>
+            </div>
+            <div class="form-group">
+                <label for="addressInput">Adresse</label>
+                <input
+                        type="text" th:field="*{address}" class="form-control" id="addressInput"
+                        aria-describedby="addressHelp" placeholder="Saisir l'adresse"> <small
+                    id="addressHelp" class="form-text text-muted">Merci d'écrire l'adresse de la personne.</small>
+            </div>
+            <div class="form-group">
+                <label for="cityInput">Ville</label>
+                <input
+                        type="text" th:field="*{city}" class="form-control" id="cityInput"
+                        aria-describedby="cityHelp" placeholder="Saisir la ville"> <small
+                    id="cityHelp" class="form-text text-muted">Merci d'écrire la ville de la personne.</small>
+            </div>
+            <div class="form-group">
+                <label for="zipInput">Code postal</label>
+                <input
+                        type="text" th:field="*{zip}" class="form-control" id="zipInput"
+                        aria-describedby="zipHelp" placeholder="Saisir le code postal"> <small
+                    id="zipHelp" class="form-text text-muted">Merci d'écrire le code postal de la personne.</small>
+            </div>
+            <div class="form-group">
+                <label for="phoneInput">Téléphone</label>
+                <input
+                        type="text" th:field="*{phone}" class="form-control" id="phoneInput"
+                        aria-describedby="phoneHelp" placeholder="Saisir le téléphone"> <small
+                    id="phoneHelp" class="form-text text-muted">Merci d'écrire le téléphone de la personne.</small>
+            </div>
+            <div class="form-group">
+                <label for="emailInput">Email</label>
+                <input type="text" th:field="*{email}" class="form-control" id="emailInput"
+                        aria-describedby="emailHelp" placeholder="Saisir l'adresse email">
+                <small id="emailHelp" class="form-text text-muted">Merci d'écrire l'adresse email de l'employée.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Créer</button>
+        </form>
+    </div>
+
+</div>
+<script th:src="@{webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

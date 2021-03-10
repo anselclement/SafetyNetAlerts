@@ -31,6 +31,10 @@ public class PersonService {
         personRepository.deleteById(id);
     }
 
+    public void deleteByLastNameAndFirstName(String lastName, String firstName){
+        personRepository.deleteByLastNameAndFirstName(lastName, firstName);
+    }
+
     public Person savePerson(Person person){
         return  personRepository.save(person);
     }

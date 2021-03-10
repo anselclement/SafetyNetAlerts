@@ -36,14 +36,14 @@
                     <td><span th:text="${person.phone}"> Téléphone </span></td>
                     <td><span th:text="${person.email}"> Mail </span></td>
                     <td>
-                        <a th:href="${}"><button class="btn btn-info">Modifier</button></a>
-                        <a th:href="${}"><button class="btn btn-danger">Supprimer</button></a>
+                        <a th:href="@{/updatePerson/{id}(id=${person.id})}"><button class="btn btn-info">Modifier</button></a>
+                        <a th:href="@{/deletePerson/{lastName}{firstName}(lastName=${person.lastName}, firstName=${person.firstName})}"><button class="btn btn-danger">Supprimer</button></a>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <a th:href="${}">Ajouter une nouvelle personne</a>
+    <a th:href="@{/createPerson}"><button class="btn btn-success">Ajouter une nouvelle personne</button></a>
 </div>
 <script th:src="@{webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
 </body>

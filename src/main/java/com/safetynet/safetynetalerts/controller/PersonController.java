@@ -31,7 +31,7 @@ public class PersonController {
     public String createPerson(Model model){
         Person person = new Person();
         model.addAttribute("person", person);
-        return "formNewPerson";
+        return "/form/formNewPerson";
     }
 
     @PostMapping("/savePerson")
@@ -44,7 +44,7 @@ public class PersonController {
     public String updatePerson(@PathVariable("id") final Long id, Model model){
         Optional<Person> person = personService.getPerson(id);
         model.addAttribute("person", person);
-        return "formUpdatePerson";
+        return "/form/formUpdatePerson";
     }
 
     /*@GetMapping("/deletePerson/{id}")
@@ -56,7 +56,7 @@ public class PersonController {
     @GetMapping("/deletePerson/{lastName}{firstName}")
     public ModelAndView deleteByLastnameAndFirstname(@PathVariable("lastName") String lastName, @PathVariable("firstName") String firstName){
         personService.deleteByLastNameAndFirstName(lastName, firstName);
-        return new ModelAndView("redirect:");
+        return new ModelAndView("redirect:/person");
     }
 
 }

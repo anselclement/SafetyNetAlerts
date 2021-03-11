@@ -24,14 +24,14 @@
                     <td><span th:text="${firestation.address}"> Adresse </span></td>
                     <td><span th:text="${firestation.station}"> Numéro de station </span></td>
                     <td>
-                        <!--<a th:href="${}"><button class="btn btn-info">Modifier</button></a>
-                        <a th:href="${}"><button class="btn btn-danger">Supprimer</button></a>-->
+                        <a th:href="@{/updateFirestation/{id}(id=${firestation.id})}"><button class="btn btn-info">Modifier</button></a>
+                        <a th:href="@{/deleteFirestation/{id}(id=${firestation.id})}"><button class="btn btn-danger">Supprimer</button></a>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <!--<a th:href="${}">Ajouter une nouvelle caserne</a>-->
+    <a th:href="@{/createFirestation}"><button class="btn btn-success">Ajouter une nouvelle caserne</button></a>
 </div>
 <script th:src="@{webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
 </body>

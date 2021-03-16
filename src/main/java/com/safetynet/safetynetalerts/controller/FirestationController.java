@@ -38,7 +38,7 @@ public class FirestationController {
     }
 
     @GetMapping("/deleteFirestation/{id}")
-    public ModelAndView deletePerson(@PathVariable("id") final Long id){
+    public ModelAndView deleteFirestation(@PathVariable("id") final Long id){
         firestationService.deleteFirestation(id);
         return new ModelAndView("redirect:/firestation");
     }

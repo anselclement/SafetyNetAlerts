@@ -13,7 +13,7 @@ public interface PersonRepository extends JpaRepository<Person, Long> {
 
     @Transactional
     @Modifying
-    @Query(value = "DELETE FROM persons p WHERE p.last_name=?1 OR p.first_name=?2", nativeQuery = true)
+    @Query(value = "DELETE FROM persons p WHERE p.last_name=?1 AND p.first_name=?2", nativeQuery = true)
     void deleteByLastNameAndFirstName(String lastName, String firstName);
 
 }

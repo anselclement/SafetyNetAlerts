@@ -13,7 +13,7 @@ import java.util.Optional;
 @Service
 public class PersonService {
 
-    private static Logger logger = LoggerFactory.getLogger(PersonService.class);
+    /*private static Logger logger = LoggerFactory.getLogger(PersonService.class);*/
 
     @Autowired
     private PersonRepository personRepository;
@@ -23,7 +23,7 @@ public class PersonService {
     }
 
     public Iterable<Person> getPersons() {
-        logger.info("Récupération de la liste entière de personnes");
+        /*logger.info("Récupération de la liste entière de personnes");*/
         return personRepository.findAll();
     }
 

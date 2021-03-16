@@ -13,7 +13,7 @@ import java.util.Optional;
 @Service
 public class PersonService {
 
-    private static Logger logger = LoggerFactory.getLogger(PersonService.class);
+    /*private static Logger logger = LoggerFactory.getLogger(PersonService.class);*/
 
     @Autowired
     private PersonRepository personRepository;
@@ -23,12 +23,16 @@ public class PersonService {
     }
 
     public Iterable<Person> getPersons() {
-        logger.info("Récupération de la liste entière de personnes");
+        /*logger.info("Récupération de la liste entière de personnes");*/
         return personRepository.findAll();
     }
 
     public void deletePerson(final Long id){
         personRepository.deleteById(id);
+    }
+
+    public void deleteByLastNameAndFirstName(String lastName, String firstName){
+        personRepository.deleteByLastNameAndFirstName(lastName, firstName);
     }
 
     public Person savePerson(Person person){

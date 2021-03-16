@@ -6,6 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.Optional;
 
 
 @Controller
@@ -23,4 +29,32 @@ public class FirestationController {
 
         return listFireStations;
     }
+
+    @GetMapping("/createFirestation")
+    public String createFirestation(Model model){
+        Firestation firestation = new Firestation();
+        model.addAttribute("firestation", firestation);
+        return "/form/formNewFirestation";
+    }
+
+    @GetMapping("/deleteFirestation/{id}")
+    public ModelAndView deleteFirestation(@PathVariable("id") final Long id){
+        firestationService.deleteFirestation(id);
+        return new ModelAndView("redirect:/firestation");
+    }
+
+    @PostMapping("/saveFirestation")
+    public ModelAndView saveFirestation(@ModelAttribute Firestation firestation){
+        firestationService.saveFirestation(firestation);
+        return new ModelAndView("redirect:/firestation");
+    }
+
+    @GetMapping("/updateFirestation/{id}")
+    public String updateFirestation(@PathVariable("id") final Long id, Model model){
+        Optional<Firestation> firestation = firestationService.getFirestation(id);
+        model.addAttribute("firestation", firestation);
+        return "/form/formUpdateFirestation";
+    }
+
+
 }

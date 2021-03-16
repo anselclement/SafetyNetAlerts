@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Mise à jour d'une caserne</title>
+    <link th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" th:rel="stylesheet">
+</head>
+<body>
+<div class="container special">
+
+    <h2 class="h2">Mise à jour d'une nouvelle caserne</h2>
+    <div>
+        <form method="post"
+              th:action="@{/saveFirestation}" th:object="${firestation}">
+            <div class="fom-group">
+                <input
+                        type="hidden" th:field="*{id}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="AdresseInput">Adresse</label>
+                <input
+                        type="text" th:field="*{address}" class="form-control" id="AdresseInput"
+                        aria-describedby="addressHelp" placeholder="Saisir l'adresse de la caserne'"> <small
+                    id="addressHelp" class="form-text text-muted">Merci d'écrire l'adresse de la caserne.</small>
+            </div>
+            <div class="form-group">
+                <label for="stationInput">Numéro de la station</label>
+                <input
+                        type="text" th:field="*{station}" class="form-control" id="stationInput"
+                        aria-describedby="stationHelp" placeholder="Saisir le numéro de la station"> <small
+                    id="stationHelp" class="form-text text-muted">Merci d'écrire le numéro de la station.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Sauvegarder</button>
+        </form>
+    </div>
+
+</div>
+<script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

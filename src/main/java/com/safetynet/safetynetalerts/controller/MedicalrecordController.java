@@ -50,9 +50,10 @@ public class MedicalrecordController {
         return "/form/formUpdateMedicalRecord";
     }
 
-    @GetMapping("/deleteMedicalrecord/{id}")
-    public ModelAndView deleteMedicalrecord(@PathVariable("id") final Long id){
-        medicalrecordService.deleteMedicalrecord(id);
+    @GetMapping("/deleteMedicalrecord/{lastName}/{firstName}")
+    public ModelAndView deleteByLastnameAndFirstname(@PathVariable("lastName") String lastName, @PathVariable("firstName") String firstName){
+        /*logger.info("Récupération de la personne à supprimer" + lastName + " " + firstName);*/
+        medicalrecordService.deleteByLastNameAndFirstName(lastName, firstName);
         return new ModelAndView("redirect:/medicalrecord");
     }
 }

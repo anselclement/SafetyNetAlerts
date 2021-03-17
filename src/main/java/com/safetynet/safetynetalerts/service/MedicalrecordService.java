@@ -28,8 +28,8 @@ public class MedicalrecordService {
         return medicalrecordRepository.findAll();
     }
 
-    public void deleteMedicalrecord(final Long id){
-        medicalrecordRepository.deleteById(id);
+    public void deleteByLastNameAndFirstName(String lastName, String firstName){
+        medicalrecordRepository.deleteByLastNameAndFirstName(lastName, firstName);
     }
 
     public Medicalrecord saveMedicalrecord(Medicalrecord medicalrecord){

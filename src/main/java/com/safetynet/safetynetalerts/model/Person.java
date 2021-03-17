@@ -2,8 +2,10 @@ package com.safetynet.safetynetalerts.model;
 
 
 import lombok.Data;
+import lombok.Generated;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Data
 @Entity
@@ -30,7 +32,23 @@ public class Person {
 
     private String email;
 
-    public Person() {
+    public Person() {}
 
+    public Person(long l, String firstName, String lastName, String address, String city, String zip, String phone, String email) {
+    }
+
+    @Override
+    @Generated
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(id, person.id) && Objects.equals(firstName, person.firstName) && Objects.equals(lastName, person.lastName) && Objects.equals(address, person.address) && Objects.equals(city, person.city) && Objects.equals(zip, person.zip) && Objects.equals(phone, person.phone) && Objects.equals(email, person.email);
+    }
+
+    @Override
+    @Generated
+    public int hashCode() {
+        return Objects.hash(id, firstName, lastName, address, city, zip, phone, email);
     }
 }

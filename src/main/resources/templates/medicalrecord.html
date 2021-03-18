@@ -32,7 +32,7 @@
                     <td><span th:text="${medicalrecord?.allergies}"> Allergies </span></td>
                     <td>
                         <a th:href="@{/updateMedicalrecord/{id}(id=${medicalrecord.id})}"><button class="btn btn-info">Modifier</button></a>
-                        <a th:href="@{/deleteMedicalrecord/{id}(id=${medicalrecord.id})}"><button class="btn btn-danger">Supprimer</button></a>
+                        <a th:href="@{/deleteMedicalrecord/{lastName}/{firstName}(lastName=${medicalrecord.lastName}, firstName=${medicalrecord.firstName})}"><button class="btn btn-danger">Supprimer</button></a>
                     </td>
                 </tr>
             </tbody>

@@ -27,10 +27,6 @@ public class PersonService {
         return personRepository.findAll();
     }
 
-    public void deletePerson(final Long id){
-        personRepository.deleteById(id);
-    }
-
     public void deleteByLastNameAndFirstName(String lastName, String firstName){
         personRepository.deleteByLastNameAndFirstName(lastName, firstName);
     }

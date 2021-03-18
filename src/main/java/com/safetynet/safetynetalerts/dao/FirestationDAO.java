@@ -32,7 +32,7 @@ public class FirestationDAO {
                 firestation.setStation(rs.getString("station"));
                 firestations.add(firestation);
             }
-
+            dataBaseConfig.closePreparedStatement(ps);
         }catch (Exception e){
             logger.info("Error getting all firestations");
         }finally {

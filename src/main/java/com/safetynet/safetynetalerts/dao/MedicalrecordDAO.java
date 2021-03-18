@@ -33,7 +33,7 @@ public class MedicalrecordDAO {
                 medicalrecord.setBirthdate(rs.getString("birthdate"));
                 medicalrecords.add(medicalrecord);
             }
-
+            dataBaseConfig.closePreparedStatement(ps);
         }catch (Exception e){
             logger.info("Error getting all medical records");
         }finally {

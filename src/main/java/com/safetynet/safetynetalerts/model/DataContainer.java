@@ -29,4 +29,14 @@ public class DataContainer {
     public int hashCode() {
         return Objects.hash(persons, firestations, medicalrecords);
     }
+
+    @Override
+    @Generated
+    public String toString() {
+        return "DataContainer{" +
+                "persons=" + persons +
+                ", firestations=" + firestations +
+                ", medicalrecords=" + medicalrecords +
+                '}';
+    }
 }

@@ -37,7 +37,7 @@ public class PersonDAO {
                 person.setPhone(rs.getString("phone"));
                 persons.add(person);
             }
-
+            dataBaseConfig.closePreparedStatement(ps);
         }catch (Exception e){
             logger.info("Error getting all persons");
         }finally {

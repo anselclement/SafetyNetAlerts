@@ -27,10 +27,12 @@ public class Medicalrecord {
 
     //TODO : delete cascade
     @ElementCollection
+    @CollectionTable(name = "medicalrecord_medications", joinColumns = @JoinColumn(name = "medicalrecord_id"))
     private List<String> medications;
 
     //TODO : delete cascade
     @ElementCollection
+    @CollectionTable(name = "medicalrecord_allergies", joinColumns = @JoinColumn(name = "medicalrecord_id"))
     private List<String> allergies;
 
     public Medicalrecord(){}

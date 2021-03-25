@@ -1,16 +1,16 @@
 package com.safetynet.safetynetalerts.controller;
 
+import com.safetynet.safetynetalerts.dao.FirestationDAO;
 import com.safetynet.safetynetalerts.model.Firestation;
 import com.safetynet.safetynetalerts.service.FirestationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -19,6 +19,9 @@ public class FirestationController {
 
     @Autowired
     private FirestationService firestationService;
+
+    @Autowired
+    private FirestationDAO firestationDAO;
 
     @GetMapping("/firestation")
     public Iterable<Firestation> getFirestations(Model model) {
@@ -56,5 +59,11 @@ public class FirestationController {
         return "/form/formUpdateFirestation";
     }
 
+    @GetMapping("/firestations{stationNumber}")
+    public String listPersonsCoveredByFirestation(@RequestParam(value = "stationNumber") String station, Model model){
+        List listPersonsCoveredByFirestation = firestationDAO.getListPersonsCoveredByFirestation(station);
+        model.addAttribute("listPersonsCoveredByFirestation", listPersonsCoveredByFirestation);
+        return "/personsCoveredByFirestation";
+    }
 
 }

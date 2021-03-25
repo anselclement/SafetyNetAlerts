@@ -1,7 +1,11 @@
 package com.safetynet.safetynetalerts.controller;
 
+import com.safetynet.safetynetalerts.model.Firestation;
 import com.safetynet.safetynetalerts.model.Person;
+import com.safetynet.safetynetalerts.service.FirestationService;
 import com.safetynet.safetynetalerts.service.PersonService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,16 +18,16 @@ import java.util.Optional;
 @Controller
 public class PersonController {
 
-    /*private static Logger logger;
-
-    PersonController(Logger logger){
-        this.logger =logger;
-    }*/
+    private static final Logger logger = LogManager.getLogger("PersonController");
 
     @Autowired
     private PersonService personService;
 
+    @Autowired
+    private FirestationService firestationService;
+
     @GetMapping("/person")
+
     public Iterable<Person> getPersons(Model model) {
 
         Iterable<Person> listPersons = personService.getPersons();
@@ -48,6 +52,7 @@ public class PersonController {
 
     @GetMapping("/updatePerson/{id}")
     public String updatePerson(@PathVariable("id") final Long id, Model model){
+        logger.info("Mise à jour de la person");
         Optional<Person> person = personService.getPerson(id);
         model.addAttribute("person", person);
         return "/form/formUpdatePerson";
@@ -55,8 +60,8 @@ public class PersonController {
 
     @GetMapping("/deletePerson/{lastName}/{firstName}")
     public ModelAndView deleteByLastnameAndFirstname(@PathVariable("lastName") String lastName, @PathVariable("firstName") String firstName){
-        /*logger.info("Récupération de la personne à supprimer" + lastName + " " + firstName);*/
         personService.deleteByLastNameAndFirstName(lastName, firstName);
+        logger.info("Récupération de la personne à supprimer" + lastName + " " + firstName);
         return new ModelAndView("redirect:/person");
     }
 

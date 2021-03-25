@@ -44,10 +44,6 @@ public class SafetynetalertsApplication {
 		}
 	}
 
-	@Bean
-	public Logger logger(){
-		return LogManager.getRootLogger();
-	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SafetynetalertsApplication.class, args);

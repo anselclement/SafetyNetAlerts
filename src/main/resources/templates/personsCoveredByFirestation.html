@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Personnes couvertes par la caserne</title>
+    <link th:href="@{webjars/bootstrap/4.3.1/css/bootstrap.min.css}" th:rel="stylesheet">
+</head>
+<body>
+    <h1>Personnes couvertes par la caserne</h1>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Adresse</th>
+            <th>Téléphone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${listPersonsCoveredByFirestation.empty}">
+            <td colspan="3">Aucune personnes couvertes par cette caserne !</td>
+        </tr>
+        <tr th:each="listPersonsCoveredByFirestation: ${listPersonsCoveredByFirestation}">
+            <td><span th:text="${listPersonsCoveredByFirestation.firstName}"> Prénom </span></td>
+            <td><span th:text="${listPersonsCoveredByFirestation.lastName}"> Nom </span></td>
+            <td><span th:text="${listPersonsCoveredByFirestation.address}"> Adresse </span></td>
+            <td><span th:text="${listPersonsCoveredByFirestation.phone}"> Téléphone </span></td>
+        </tr>
+        </tbody>
+    </table>
+    <script th:src="@{webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

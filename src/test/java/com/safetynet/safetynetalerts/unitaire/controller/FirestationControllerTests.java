@@ -1,6 +1,7 @@
 package com.safetynet.safetynetalerts.unitaire.controller;
 
 import com.safetynet.safetynetalerts.controller.FirestationController;
+import com.safetynet.safetynetalerts.dao.FirestationDAO;
 import com.safetynet.safetynetalerts.repository.FirestationRepository;
 import com.safetynet.safetynetalerts.service.FirestationService;
 import com.safetynet.safetynetalerts.service.MedicalrecordService;
@@ -33,6 +34,9 @@ public class FirestationControllerTests {
 
     @MockBean
     private MedicalrecordService medicalrecordService;
+
+    @MockBean
+    private FirestationDAO firestationDAO;
 
     @Test
     public void getFirestationsTest() throws Exception{

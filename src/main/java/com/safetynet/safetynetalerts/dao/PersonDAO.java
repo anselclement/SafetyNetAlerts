@@ -4,6 +4,7 @@ import com.safetynet.safetynetalerts.config.DataBaseConfig;
 import com.safetynet.safetynetalerts.model.Person;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,6 +12,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class PersonDAO {
 
     private static final Logger logger = LogManager.getLogger("PersonDAO");
@@ -44,5 +46,26 @@ public class PersonDAO {
             dataBaseConfig.closeConnection(con);
         }
         return persons;
+    }
+
+    public List getPersonsEmailByCity(String city){
+
+        Connection con = null;
+        List listEmail = new ArrayList<>();
+        try{
+            con = dataBaseConfig.getConnection();
+            PreparedStatement ps = con.prepareStatement("Select email from persons where city = ?");
+            ps.setString(1, city);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                listEmail.add(rs.getString("email"));
+            }
+            dataBaseConfig.closePreparedStatement(ps);
+        } catch (Exception e) {
+            logger.info("Error getting email");
+        } finally{
+            dataBaseConfig.closeConnection(con);
+        }
+        return listEmail;
     }
 }

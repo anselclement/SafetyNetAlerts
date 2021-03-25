@@ -44,6 +44,16 @@
         </table>
     </div>
     <a th:href="@{/createPerson}"><button class="btn btn-success">Ajouter une nouvelle personne</button></a>
+    <div class="container">
+        <h6>Sélectionner une ville pour voir les e-mail des personnes présentes dans celle-ci :</h6>
+        <form class="form-group" th:action="@{/communityEmail{city}(city=${city})}" method="get">
+            <select class="form-control" name="city">
+                <option value="">Sélectionner le numéro de la caserne</option>
+                <option th:each="person : ${persons}" th:value="${person.city}" th:text="${person.city}"></option>
+            </select>
+            <button class="btn btn-primary" type="submit">Valider</button>
+        </form>
+    </div>
 </div>
 <script th:src="@{webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
 </body>

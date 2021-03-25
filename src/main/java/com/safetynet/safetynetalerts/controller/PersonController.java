@@ -1,6 +1,6 @@
 package com.safetynet.safetynetalerts.controller;
 
-import com.safetynet.safetynetalerts.model.Firestation;
+import com.safetynet.safetynetalerts.dao.PersonDAO;
 import com.safetynet.safetynetalerts.model.Person;
 import com.safetynet.safetynetalerts.service.FirestationService;
 import com.safetynet.safetynetalerts.service.PersonService;
@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -24,7 +25,7 @@ public class PersonController {
     private PersonService personService;
 
     @Autowired
-    private FirestationService firestationService;
+    private PersonDAO personDAO;
 
     @GetMapping("/person")
 
@@ -65,4 +66,10 @@ public class PersonController {
         return new ModelAndView("redirect:/person");
     }
 
+    @GetMapping("/communityEmail{city}")
+    public String listPersonsEmailByCity(@RequestParam(value = "city") String city, Model model){
+        List listPersonsEmailByCity = personDAO.getPersonsEmailByCity(city);
+        model.addAttribute("listPersonsEmailByCity", listPersonsEmailByCity);
+        return "/personsEmailByCity";
+    }
 }

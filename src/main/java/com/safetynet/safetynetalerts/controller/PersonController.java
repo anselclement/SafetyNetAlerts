@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
@@ -71,5 +72,12 @@ public class PersonController {
         List listPersonsEmailByCity = personDAO.getPersonsEmailByCity(city);
         model.addAttribute("listPersonsEmailByCity", listPersonsEmailByCity);
         return "/personsEmailByCity";
+    }
+
+    @GetMapping("/childAlert{address}")
+    public String ChildListAtGivenAddressWithMembersOfFamily(@RequestParam(value = "address") String address, Model model){
+        HashMap ChildListAtGivenAddressWithMembersOfFamily = personDAO.getChildListAtGivenAddressWithMembersOfFamily(address);
+        model.addAttribute("ChildListAtGivenAddressWithMembersOfFamily", ChildListAtGivenAddressWithMembersOfFamily);
+        return "/ChildListAtGivenAddress";
     }
 }

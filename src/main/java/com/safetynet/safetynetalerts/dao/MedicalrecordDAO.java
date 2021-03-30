@@ -47,7 +47,7 @@ public class MedicalrecordDAO {
             }
             dataBaseConfig.closePreparedStatement(ps);
         }catch (Exception e){
-            logger.info("Error getting all medical records");
+            logger.error("Error getting all medical records");
         }finally {
             dataBaseConfig.closeConnection(con);
         }

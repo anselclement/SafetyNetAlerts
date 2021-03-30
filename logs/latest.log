@@ -5879,3 +5879,1250 @@ org.hibernate.LazyInitializationException: failed to lazily initialize a collect
 2021-03-30 12:25:46.142  INFO 11280 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
 2021-03-30 12:25:46.167  INFO 11280 --- [http-nio-8080-exec-1] c.s.s.r.MedicalrecordRepository          : Récupération de la liste entière des dossiers médicaux
 2021-03-30 12:26:09.754  INFO 11280 --- [http-nio-8080-exec-2] c.s.s.r.FirestationRepository            : Récupération de la liste entière des casernes
+2021-03-30 14:51:15.142  INFO 5916 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 5916 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 14:51:15.157  INFO 5916 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 14:51:15.249  INFO 5916 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 14:51:15.250  INFO 5916 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 14:51:16.206  INFO 5916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 14:51:16.383  INFO 5916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 168 ms. Found 3 JPA repository interfaces.
+2021-03-30 14:51:19.329  INFO 5916 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 14:51:19.376  INFO 5916 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 14:51:19.377  INFO 5916 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:51:19.518  INFO 5916 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 14:51:19.518  INFO 5916 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4268 ms
+2021-03-30 14:51:19.799  INFO 5916 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 14:51:19.858  INFO 5916 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 14:51:19.979  INFO 5916 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 14:51:20.159  INFO 5916 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 14:51:20.872  INFO 5916 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 14:51:21.070  INFO 5916 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 14:51:23.594  INFO 5916 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 14:51:23.625  INFO 5916 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 14:51:23.741  INFO 5916 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 14:51:24.298  INFO 5916 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 14:51:24.331  INFO 5916 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 14:51:24.333  INFO 5916 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 14:51:24.376  WARN 5916 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 14:51:24.469  INFO 5916 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 14:51:24.758  INFO 5916 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 14:51:24.766  INFO 5916 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 10.406 seconds (JVM running for 12.922)
+2021-03-30 14:51:39.206  INFO 5916 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 14:51:39.206  INFO 5916 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 14:51:39.207  INFO 5916 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 14:51:39.230  INFO 5916 --- [http-nio-8080-exec-1] c.s.s.c.PersonController                 : Affichage de la liste de personne
+2021-03-30 14:51:39.231  INFO 5916 --- [http-nio-8080-exec-1] c.s.s.s.PersonService                    : Récupération de la liste entière de personnes
+2021-03-30 14:51:49.412  INFO 5916 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 14:51:49.448  INFO 5916 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 14:51:49.468  INFO 5916 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 14:52:29.440  INFO 19000 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 19000 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 14:52:29.450  INFO 19000 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 14:52:29.501  INFO 19000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 14:52:29.501  INFO 19000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 14:52:30.155  INFO 19000 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 14:52:30.219  INFO 19000 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2021-03-30 14:52:30.875  INFO 19000 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 14:52:30.889  INFO 19000 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 14:52:30.890  INFO 19000 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:52:30.982  INFO 19000 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 14:52:30.982  INFO 19000 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1480 ms
+2021-03-30 14:52:31.140  INFO 19000 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 14:52:31.187  INFO 19000 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 14:52:31.311  INFO 19000 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 14:52:31.407  INFO 19000 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 14:52:31.679  INFO 19000 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 14:52:31.694  INFO 19000 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 14:52:33.369  INFO 19000 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 14:52:33.394  INFO 19000 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 14:52:33.416  INFO 19000 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 14:52:33.845  INFO 19000 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 14:52:33.864  INFO 19000 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 14:52:33.866  INFO 19000 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 14:52:33.904  WARN 19000 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 14:52:34.005  INFO 19000 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 14:52:34.304  INFO 19000 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 14:52:34.311  INFO 19000 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.314 seconds (JVM running for 6.462)
+2021-03-30 14:52:46.945  INFO 19000 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 14:52:46.946  INFO 19000 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 14:52:46.947  INFO 19000 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 14:52:46.985  INFO 19000 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 14:52:47.012  INFO 19000 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 14:52:47.013  INFO 19000 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 14:52:53.188  INFO 19000 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 14:52:53.215  INFO 19000 --- [http-nio-8080-exec-3] DataBaseConfig                           : Create DB connection
+2021-03-30 14:52:53.222  INFO 19000 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 14:52:53.223  INFO 19000 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 14:52:53.249  INFO 19000 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 14:52:53.250  INFO 19000 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing DB connection
+2021-03-30 14:53:14.146  INFO 19000 --- [http-nio-8080-exec-4] c.s.s.r.FirestationRepository            : Récupération de la liste entière des casernes
+2021-03-30 14:53:18.799  INFO 19000 --- [http-nio-8080-exec-5] c.s.s.c.PersonController                 : Affichage de la liste de personne
+2021-03-30 14:53:18.799  INFO 19000 --- [http-nio-8080-exec-5] c.s.s.s.PersonService                    : Récupération de la liste entière de personnes
+2021-03-30 14:53:23.803  INFO 19000 --- [http-nio-8080-exec-6] DataBaseConfig                           : Create DB connection
+2021-03-30 14:53:23.821  INFO 19000 --- [http-nio-8080-exec-6] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 14:53:23.822  INFO 19000 --- [http-nio-8080-exec-6] DataBaseConfig                           : Closing DB connection
+2021-03-30 14:54:00.576  INFO 19000 --- [http-nio-8080-exec-8] DataBaseConfig                           : Create DB connection
+2021-03-30 14:54:00.599  INFO 19000 --- [http-nio-8080-exec-8] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 14:54:00.600  INFO 19000 --- [http-nio-8080-exec-8] DataBaseConfig                           : Closing DB connection
+2021-03-30 14:54:55.180  INFO 7804 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 7804 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 14:54:55.193  INFO 7804 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 14:54:55.271  INFO 7804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 14:54:55.272  INFO 7804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 14:54:56.335  INFO 7804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 14:54:56.430  INFO 7804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 3 JPA repository interfaces.
+2021-03-30 14:54:57.174  INFO 7804 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 14:54:57.185  INFO 7804 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 14:54:57.185  INFO 7804 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:54:57.279  INFO 7804 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 14:54:57.279  INFO 7804 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2006 ms
+2021-03-30 14:54:57.464  INFO 7804 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 14:54:57.515  INFO 7804 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 14:54:57.648  INFO 7804 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 14:54:57.744  INFO 7804 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 14:54:58.029  INFO 7804 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 14:54:58.044  INFO 7804 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 14:54:59.841  INFO 7804 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 14:54:59.868  INFO 7804 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 14:54:59.899  INFO 7804 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 14:55:00.344  INFO 7804 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 14:55:00.365  INFO 7804 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 14:55:00.367  INFO 7804 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 14:55:00.409  WARN 7804 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 14:55:00.523  INFO 7804 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 14:55:00.820  INFO 7804 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 14:55:00.828  INFO 7804 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 6.121 seconds (JVM running for 7.329)
+2021-03-30 14:55:04.132  INFO 7804 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 14:55:04.132  INFO 7804 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 14:55:04.134  INFO 7804 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2021-03-30 14:55:04.162  INFO 7804 --- [http-nio-8080-exec-1] c.s.s.c.PersonController                 : Affichage de la liste de personne
+2021-03-30 14:55:04.162  INFO 7804 --- [http-nio-8080-exec-1] c.s.s.s.PersonService                    : Récupération de la liste entière de personnes
+2021-03-30 14:55:09.198  INFO 7804 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 14:55:09.221  INFO 7804 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 14:55:09.222  INFO 7804 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 14:55:16.967  INFO 7804 --- [http-nio-8080-exec-3] DataBaseConfig                           : Create DB connection
+2021-03-30 14:55:16.987  INFO 7804 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 14:55:16.988  INFO 7804 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing DB connection
+2021-03-30 14:57:59.052  INFO 10532 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 10532 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 14:57:59.063  INFO 10532 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 14:57:59.118  INFO 10532 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 14:57:59.119  INFO 10532 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 14:57:59.813  INFO 10532 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 14:57:59.880  INFO 10532 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 3 JPA repository interfaces.
+2021-03-30 14:58:00.572  INFO 10532 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 14:58:00.582  INFO 10532 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 14:58:00.583  INFO 10532 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:58:00.677  INFO 10532 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 14:58:00.677  INFO 10532 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1557 ms
+2021-03-30 14:58:00.857  INFO 10532 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 14:58:00.909  INFO 10532 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 14:58:01.038  INFO 10532 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 14:58:01.134  INFO 10532 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 14:58:01.417  INFO 10532 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 14:58:01.432  INFO 10532 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 14:58:05.023  INFO 10532 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 14:58:05.052  INFO 10532 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 14:58:05.082  INFO 10532 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 14:58:05.506  INFO 10532 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 14:58:05.525  INFO 10532 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 14:58:05.527  INFO 10532 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 14:58:05.578  WARN 10532 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 14:58:05.674  INFO 10532 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 14:58:06.004  INFO 10532 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 14:58:06.011  INFO 10532 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 7.426 seconds (JVM running for 8.61)
+2021-03-30 14:58:13.110  INFO 10532 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 14:58:13.110  INFO 10532 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 14:58:13.111  INFO 10532 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 14:58:13.131  INFO 10532 --- [http-nio-8080-exec-1] c.s.s.c.PersonController                 : Affichage de la liste de personne
+2021-03-30 14:58:13.132  INFO 10532 --- [http-nio-8080-exec-1] c.s.s.s.PersonService                    : Récupération de la liste entière de personnes
+2021-03-30 14:58:17.746  INFO 10532 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 14:58:17.815  INFO 10532 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 14:58:17.816  INFO 10532 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 14:58:25.151  INFO 10532 --- [http-nio-8080-exec-3] DataBaseConfig                           : Create DB connection
+2021-03-30 14:58:25.177  INFO 10532 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 14:58:25.178  INFO 10532 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing DB connection
+2021-03-30 14:59:22.244  INFO 18772 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 18772 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 14:59:22.260  INFO 18772 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 14:59:22.315  INFO 18772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 14:59:22.315  INFO 18772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 14:59:23.034  INFO 18772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 14:59:23.111  INFO 18772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
+2021-03-30 14:59:23.825  INFO 18772 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 14:59:23.836  INFO 18772 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 14:59:23.836  INFO 18772 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 14:59:23.931  INFO 18772 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 14:59:23.931  INFO 18772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1615 ms
+2021-03-30 14:59:24.099  INFO 18772 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 14:59:24.147  INFO 18772 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 14:59:24.283  INFO 18772 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 14:59:24.387  INFO 18772 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 14:59:24.679  INFO 18772 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 14:59:24.693  INFO 18772 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 14:59:26.873  INFO 18772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 14:59:26.890  INFO 18772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 14:59:26.912  INFO 18772 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 14:59:27.416  INFO 18772 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 14:59:27.437  INFO 18772 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 14:59:27.439  INFO 18772 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 14:59:27.492  WARN 18772 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 14:59:27.628  INFO 18772 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 14:59:27.967  INFO 18772 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 14:59:27.980  INFO 18772 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 6.253 seconds (JVM running for 7.349)
+2021-03-30 14:59:31.384  INFO 18772 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 14:59:31.385  INFO 18772 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 14:59:31.387  INFO 18772 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2021-03-30 14:59:31.441  INFO 18772 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 14:59:31.526  INFO 18772 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 14:59:31.527  INFO 18772 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 14:59:31.820 ERROR 18772 --- [http-nio-8080-exec-1] o.t.TemplateEngine                       : [THYMELEAF][http-nio-8080-exec-1] Exception processing template "/ChildListAtGivenAddress": An error happened during template parsing (template: "class path resource [templates//ChildListAtGivenAddress.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//ChildListAtGivenAddress.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) [thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) [thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) [thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) [thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1393) [spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1138) [spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1077) [spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) [spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "ChildListAtGivenAddressWithMembersOfFamily.listChild.empty and ChildListAtGivenAddressWithMembersOfFamily.othersMembers.notEmpty" (template: "/ChildListAtGivenAddress" - line 20, col 9)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	... 48 more
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "ChildListAtGivenAddressWithMembersOfFamily.listChild.empty and ChildListAtGivenAddressWithMembersOfFamily.othersMembers.notEmpty" (template: "/ChildListAtGivenAddress" - line 20, col 9)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	... 48 more
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'notEmpty' cannot be found on object of type 'java.util.ArrayList' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:188) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.ast.OpAnd.getBooleanValue(OpAnd.java:57) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.ast.OpAnd.getValueInternal(OpAnd.java:52) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	... 48 more
+
+2021-03-30 14:59:31.919 ERROR 18772 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//ChildListAtGivenAddress.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'notEmpty' cannot be found on object of type 'java.util.ArrayList' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:188) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.ast.OpAnd.getBooleanValue(OpAnd.java:57) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.ast.OpAnd.getValueInternal(OpAnd.java:52) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.3.4.jar:5.3.4]
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1393) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1138) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1077) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+
+2021-03-30 15:00:53.579  INFO 7596 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 7596 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:00:53.588  INFO 7596 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:00:53.636  INFO 7596 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:00:53.637  INFO 7596 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:00:54.462  INFO 7596 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:00:54.531  INFO 7596 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:00:55.201  INFO 7596 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:00:55.213  INFO 7596 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:00:55.214  INFO 7596 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:00:55.308  INFO 7596 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:00:55.308  INFO 7596 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1670 ms
+2021-03-30 15:00:55.462  INFO 7596 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:00:55.510  INFO 7596 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:00:55.650  INFO 7596 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:00:55.751  INFO 7596 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:00:56.039  INFO 7596 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:00:56.053  INFO 7596 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:00:57.438  INFO 7596 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:00:57.464  INFO 7596 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:00:57.485  INFO 7596 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:00:57.906  INFO 7596 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:00:57.927  INFO 7596 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:00:57.928  INFO 7596 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:00:57.976  WARN 7596 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:00:58.076  INFO 7596 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:00:58.367  INFO 7596 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:00:58.376  INFO 7596 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.243 seconds (JVM running for 6.387)
+2021-03-30 15:01:01.512  INFO 7596 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:01:01.512  INFO 7596 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:01:01.513  INFO 7596 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:01:01.558  INFO 7596 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:01:01.616  INFO 7596 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:01:01.616  INFO 7596 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:01:04.918  INFO 7596 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 15:01:04.936  INFO 7596 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:01:04.936  INFO 7596 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:01:41.597  INFO 13920 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 13920 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:01:41.613  INFO 13920 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:01:41.655  INFO 13920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:01:41.655  INFO 13920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:01:42.383  INFO 13920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:01:42.449  INFO 13920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:01:43.115  INFO 13920 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:01:43.126  INFO 13920 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:01:43.127  INFO 13920 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:01:43.225  INFO 13920 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:01:43.226  INFO 13920 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1570 ms
+2021-03-30 15:01:43.401  INFO 13920 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:01:43.452  INFO 13920 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:01:43.601  INFO 13920 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:01:43.705  INFO 13920 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:01:43.980  INFO 13920 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:01:43.994  INFO 13920 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:01:46.015  INFO 13920 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:01:46.059  INFO 13920 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:01:46.079  INFO 13920 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:01:46.492  INFO 13920 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:01:46.512  INFO 13920 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:01:46.513  INFO 13920 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:01:46.555  WARN 13920 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:01:46.646  INFO 13920 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:01:46.925  INFO 13920 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:01:46.936  INFO 13920 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.735 seconds (JVM running for 6.956)
+2021-03-30 15:01:51.873  INFO 13920 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:01:51.874  INFO 13920 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:01:51.875  INFO 13920 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:01:51.924  INFO 13920 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:01:51.945  INFO 13920 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:01:51.946  INFO 13920 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:01:54.679  INFO 13920 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 15:01:54.699  INFO 13920 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:01:54.700  INFO 13920 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:01:55.665  INFO 13920 --- [http-nio-8080-exec-3] DataBaseConfig                           : Create DB connection
+2021-03-30 15:01:55.683  INFO 13920 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:01:55.684  INFO 13920 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:01:56.644  INFO 13920 --- [http-nio-8080-exec-4] DataBaseConfig                           : Create DB connection
+2021-03-30 15:01:56.666  INFO 13920 --- [http-nio-8080-exec-4] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:01:56.666  INFO 13920 --- [http-nio-8080-exec-4] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:02:10.518  INFO 4608 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 4608 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:02:10.528  INFO 4608 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:02:10.591  INFO 4608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:02:10.591  INFO 4608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:02:11.252  INFO 4608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:02:11.315  INFO 4608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:02:11.996  INFO 4608 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:02:12.005  INFO 4608 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:02:12.006  INFO 4608 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:02:12.094  INFO 4608 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:02:12.095  INFO 4608 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1503 ms
+2021-03-30 15:02:12.260  INFO 4608 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:02:12.311  INFO 4608 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:02:12.446  INFO 4608 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:02:12.546  INFO 4608 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:02:12.828  INFO 4608 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:02:12.843  INFO 4608 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:02:14.650  INFO 4608 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:02:14.659  INFO 4608 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:02:14.677  INFO 4608 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:02:15.119  INFO 4608 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:02:15.138  INFO 4608 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:02:15.140  INFO 4608 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:02:15.190  WARN 4608 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:02:15.296  INFO 4608 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:02:15.573  INFO 4608 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:02:15.581  INFO 4608 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.51 seconds (JVM running for 6.582)
+2021-03-30 15:02:19.472  INFO 4608 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:02:19.473  INFO 4608 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:02:19.474  INFO 4608 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:02:19.513  INFO 4608 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:02:19.532  INFO 4608 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:02:19.532  INFO 4608 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:02:24.009  INFO 4608 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 15:02:24.051  INFO 4608 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:02:24.052  INFO 4608 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:02:45.178  INFO 4608 --- [http-nio-8080-exec-5] DataBaseConfig                           : Create DB connection
+2021-03-30 15:02:45.197  INFO 4608 --- [http-nio-8080-exec-5] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:02:45.198  INFO 4608 --- [http-nio-8080-exec-5] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:02:48.997  INFO 4608 --- [http-nio-8080-exec-6] DataBaseConfig                           : Create DB connection
+2021-03-30 15:02:49.015  INFO 4608 --- [http-nio-8080-exec-6] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:02:49.015  INFO 4608 --- [http-nio-8080-exec-6] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:03:25.111  INFO 17708 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 17708 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:03:25.120  INFO 17708 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:03:25.182  INFO 17708 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:03:25.182  INFO 17708 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:03:25.897  INFO 17708 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:03:25.964  INFO 17708 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:03:26.633  INFO 17708 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:03:26.643  INFO 17708 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:03:26.643  INFO 17708 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:03:26.740  INFO 17708 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:03:26.741  INFO 17708 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1557 ms
+2021-03-30 15:03:26.917  INFO 17708 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:03:26.967  INFO 17708 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:03:27.090  INFO 17708 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:03:27.184  INFO 17708 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:03:27.467  INFO 17708 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:03:27.481  INFO 17708 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:03:29.383  INFO 17708 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:03:29.408  INFO 17708 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:03:29.431  INFO 17708 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:03:29.858  INFO 17708 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:03:29.878  INFO 17708 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:03:29.879  INFO 17708 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:03:29.926  WARN 17708 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:03:30.043  INFO 17708 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:03:30.346  INFO 17708 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:03:30.353  INFO 17708 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.699 seconds (JVM running for 6.95)
+2021-03-30 15:03:38.794  INFO 17708 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:03:38.794  INFO 17708 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:03:38.795  INFO 17708 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:03:38.838  INFO 17708 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:03:38.886  INFO 17708 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:03:38.887  INFO 17708 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:03:58.075  INFO 17708 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 15:03:58.094  INFO 17708 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:03:58.095  INFO 17708 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:04:28.898  INFO 17672 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 17672 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:04:28.910  INFO 17672 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:04:28.957  INFO 17672 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:04:28.957  INFO 17672 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:04:29.688  INFO 17672 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:04:29.756  INFO 17672 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:04:30.402  INFO 17672 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:04:30.418  INFO 17672 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:04:30.419  INFO 17672 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:04:30.517  INFO 17672 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:04:30.517  INFO 17672 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1559 ms
+2021-03-30 15:04:30.679  INFO 17672 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:04:30.727  INFO 17672 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:04:30.858  INFO 17672 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:04:30.948  INFO 17672 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:04:31.234  INFO 17672 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:04:31.250  INFO 17672 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:04:33.006  INFO 17672 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:04:33.037  INFO 17672 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:04:33.061  INFO 17672 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:04:33.479  INFO 17672 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:04:33.498  INFO 17672 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:04:33.499  INFO 17672 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:04:33.542  WARN 17672 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:04:33.644  INFO 17672 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:04:33.915  INFO 17672 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:04:33.923  INFO 17672 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.438 seconds (JVM running for 6.671)
+2021-03-30 15:04:57.480  INFO 17672 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:04:57.481  INFO 17672 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:04:57.482  INFO 17672 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:04:57.526  INFO 17672 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:04:57.548  INFO 17672 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:04:57.548  INFO 17672 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:05:05.213  INFO 17672 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 15:05:05.233  INFO 17672 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:05:05.234  INFO 17672 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:05:29.915  INFO 9848 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 9848 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:05:29.924  INFO 9848 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:05:29.968  INFO 9848 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:05:29.969  INFO 9848 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:05:30.645  INFO 9848 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:05:30.713  INFO 9848 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:05:31.415  INFO 9848 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:05:31.428  INFO 9848 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:05:31.429  INFO 9848 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:05:31.541  INFO 9848 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:05:31.541  INFO 9848 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1572 ms
+2021-03-30 15:05:31.709  INFO 9848 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:05:31.758  INFO 9848 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:05:31.893  INFO 9848 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:05:31.995  INFO 9848 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:05:32.292  INFO 9848 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:05:32.305  INFO 9848 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:05:33.642  INFO 9848 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:05:33.660  INFO 9848 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:05:33.685  INFO 9848 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:05:34.103  INFO 9848 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:05:34.124  INFO 9848 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:05:34.125  INFO 9848 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:05:34.177  WARN 9848 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:05:34.287  INFO 9848 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:05:34.591  INFO 9848 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:05:34.598  INFO 9848 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.138 seconds (JVM running for 6.291)
+2021-03-30 15:05:38.632  INFO 9848 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:05:38.632  INFO 9848 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:05:38.633  INFO 9848 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:05:38.689  INFO 9848 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:05:38.732  INFO 9848 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:05:38.733  INFO 9848 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:05:41.126  INFO 9848 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 15:05:41.145  INFO 9848 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:05:41.146  INFO 9848 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:05:54.131  INFO 568 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 568 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:05:54.139  INFO 568 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:05:54.202  INFO 568 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:05:54.203  INFO 568 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:05:54.866  INFO 568 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:05:54.931  INFO 568 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:05:55.586  INFO 568 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:05:55.599  INFO 568 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:05:55.600  INFO 568 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:05:55.694  INFO 568 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:05:55.694  INFO 568 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1490 ms
+2021-03-30 15:05:55.852  INFO 568 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:05:55.900  INFO 568 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:05:56.027  INFO 568 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:05:56.122  INFO 568 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:05:56.409  INFO 568 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:05:56.424  INFO 568 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:05:57.712  INFO 568 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:05:57.736  INFO 568 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:05:57.763  INFO 568 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:05:58.186  INFO 568 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:05:58.211  INFO 568 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:05:58.213  INFO 568 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:05:58.258  WARN 568 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:05:58.370  INFO 568 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:05:58.714  INFO 568 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:05:58.723  INFO 568 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.034 seconds (JVM running for 6.108)
+2021-03-30 15:06:01.383  INFO 568 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:06:01.383  INFO 568 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:06:01.384  INFO 568 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:06:01.424  INFO 568 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:06:01.443  INFO 568 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:06:01.443  INFO 568 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:08:26.061  INFO 17420 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 17420 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:08:26.071  INFO 17420 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:08:26.130  INFO 17420 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:08:26.130  INFO 17420 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:08:26.814  INFO 17420 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:08:26.882  INFO 17420 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:08:27.517  INFO 17420 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:08:27.528  INFO 17420 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:08:27.529  INFO 17420 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:08:27.626  INFO 17420 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:08:27.626  INFO 17420 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1491 ms
+2021-03-30 15:08:27.792  INFO 17420 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:08:27.840  INFO 17420 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:08:27.971  INFO 17420 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:08:28.071  INFO 17420 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:08:28.346  INFO 17420 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:08:28.361  INFO 17420 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:08:29.730  INFO 17420 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:08:29.740  INFO 17420 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:08:29.755  INFO 17420 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:08:30.163  INFO 17420 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:08:30.186  INFO 17420 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:08:30.187  INFO 17420 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:08:30.229  WARN 17420 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:08:30.322  INFO 17420 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:08:30.595  INFO 17420 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:08:30.603  INFO 17420 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 4.931 seconds (JVM running for 6.014)
+2021-03-30 15:08:42.990  INFO 17420 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:08:42.990  INFO 17420 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:08:42.991  INFO 17420 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:08:43.030  INFO 17420 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:08:43.049  INFO 17420 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:08:43.050  INFO 17420 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:14:28.659  INFO 4604 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 4604 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:14:28.673  INFO 4604 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:14:28.713  INFO 4604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:14:28.713  INFO 4604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:14:29.546  INFO 4604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:14:29.607  INFO 4604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:14:30.299  INFO 4604 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:14:30.309  INFO 4604 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:14:30.309  INFO 4604 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:14:30.398  INFO 4604 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:14:30.398  INFO 4604 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1684 ms
+2021-03-30 15:14:30.569  INFO 4604 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:14:30.620  INFO 4604 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:14:30.745  INFO 4604 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:14:30.834  INFO 4604 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:14:31.107  INFO 4604 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:14:31.122  INFO 4604 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:14:32.961  INFO 4604 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:14:32.979  INFO 4604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:14:33.000  INFO 4604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:14:33.420  INFO 4604 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:14:33.440  INFO 4604 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:14:33.442  INFO 4604 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:14:33.483  WARN 4604 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:14:33.578  INFO 4604 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:14:33.841  INFO 4604 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:14:33.849  INFO 4604 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.626 seconds (JVM running for 6.774)
+2021-03-30 15:14:36.237  INFO 4604 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:14:36.237  INFO 4604 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:14:36.239  INFO 4604 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:14:36.280  INFO 4604 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:14:36.301  INFO 4604 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:14:36.302  INFO 4604 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:14:41.965  INFO 4604 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 15:14:41.985  INFO 4604 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:14:41.986  INFO 4604 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:15:06.520  INFO 1920 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 1920 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:15:06.528  INFO 1920 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:15:06.575  INFO 1920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:15:06.576  INFO 1920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:15:07.260  INFO 1920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:15:07.340  INFO 1920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:15:08.041  INFO 1920 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:15:08.052  INFO 1920 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:15:08.053  INFO 1920 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:15:08.147  INFO 1920 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:15:08.147  INFO 1920 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1570 ms
+2021-03-30 15:15:08.311  INFO 1920 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:15:08.362  INFO 1920 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:15:08.489  INFO 1920 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:15:08.587  INFO 1920 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:15:08.874  INFO 1920 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:15:08.890  INFO 1920 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:15:10.093  INFO 1920 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:15:10.111  INFO 1920 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:15:10.134  INFO 1920 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:15:10.592  INFO 1920 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:15:10.612  INFO 1920 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:15:10.614  INFO 1920 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:15:10.656  WARN 1920 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:15:10.760  INFO 1920 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:15:11.034  INFO 1920 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:15:11.042  INFO 1920 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 4.921 seconds (JVM running for 6.03)
+2021-03-30 15:15:14.075  INFO 1920 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:15:14.075  INFO 1920 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:15:14.076  INFO 1920 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2021-03-30 15:15:14.116  INFO 1920 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:15:14.136  INFO 1920 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:15:14.137  INFO 1920 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:15:21.438  INFO 1920 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 15:15:21.456  INFO 1920 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:15:21.457  INFO 1920 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:15:28.162  INFO 1920 --- [http-nio-8080-exec-3] DataBaseConfig                           : Create DB connection
+2021-03-30 15:15:28.179  INFO 1920 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:15:28.179  INFO 1920 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:16:15.299  INFO 15212 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 15212 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:16:15.307  INFO 15212 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:16:15.350  INFO 15212 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:16:15.350  INFO 15212 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:16:15.990  INFO 15212 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:16:16.054  INFO 15212 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:16:16.687  INFO 15212 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:16:16.697  INFO 15212 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:16:16.698  INFO 15212 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:16:16.792  INFO 15212 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:16:16.792  INFO 15212 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1441 ms
+2021-03-30 15:16:16.960  INFO 15212 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:16:17.009  INFO 15212 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:16:17.132  INFO 15212 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:16:17.225  INFO 15212 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:16:17.497  INFO 15212 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:16:17.511  INFO 15212 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:16:19.691  INFO 15212 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:16:19.708  INFO 15212 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:16:19.730  INFO 15212 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:16:20.134  INFO 15212 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:16:20.153  INFO 15212 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:16:20.154  INFO 15212 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:16:20.201  WARN 15212 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:16:20.297  INFO 15212 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:16:20.563  INFO 15212 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:16:20.571  INFO 15212 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.699 seconds (JVM running for 6.803)
+2021-03-30 15:16:23.549  INFO 15212 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:16:23.549  INFO 15212 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:16:23.550  INFO 15212 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:16:23.595  INFO 15212 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:16:23.665  INFO 15212 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:16:23.665  INFO 15212 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:16:25.797  INFO 15212 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 15:16:25.818  INFO 15212 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:16:25.819  INFO 15212 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:16:31.377  INFO 15212 --- [http-nio-8080-exec-3] DataBaseConfig                           : Create DB connection
+2021-03-30 15:16:31.394  INFO 15212 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:16:31.395  INFO 15212 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:16:35.583  INFO 15212 --- [http-nio-8080-exec-4] c.s.s.c.PersonController                 : Affichage de la liste de personne
+2021-03-30 15:16:35.583  INFO 15212 --- [http-nio-8080-exec-4] c.s.s.s.PersonService                    : Récupération de la liste entière de personnes
+2021-03-30 15:17:07.598  INFO 18540 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 18540 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:17:07.607  INFO 18540 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:17:07.647  INFO 18540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:17:07.648  INFO 18540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:17:08.311  INFO 18540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:17:08.384  INFO 18540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:17:09.054  INFO 18540 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:17:09.065  INFO 18540 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:17:09.066  INFO 18540 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:17:09.161  INFO 18540 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:17:09.161  INFO 18540 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1512 ms
+2021-03-30 15:17:09.325  INFO 18540 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:17:09.377  INFO 18540 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:17:09.508  INFO 18540 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:17:09.600  INFO 18540 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:17:09.879  INFO 18540 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:17:09.894  INFO 18540 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:17:11.284  INFO 18540 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:17:11.308  INFO 18540 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:17:11.331  INFO 18540 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:17:11.723  INFO 18540 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:17:11.746  INFO 18540 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:17:11.747  INFO 18540 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:17:11.789  WARN 18540 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:17:11.886  INFO 18540 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:17:12.194  INFO 18540 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:17:12.201  INFO 18540 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.022 seconds (JVM running for 6.191)
+2021-03-30 15:17:20.346  INFO 18540 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:17:20.346  INFO 18540 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:17:20.347  INFO 18540 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:17:20.406  INFO 18540 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 15:17:20.435  INFO 18540 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:17:20.436  INFO 18540 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:17:20.467  INFO 18540 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:17:20.493  INFO 18540 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:17:20.494  INFO 18540 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:17:26.901  INFO 18540 --- [http-nio-8080-exec-3] DataBaseConfig                           : Create DB connection
+2021-03-30 15:17:26.923  INFO 18540 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:17:26.924  INFO 18540 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:18:47.423  INFO 12216 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 12216 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:18:47.432  INFO 12216 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:18:47.475  INFO 12216 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:18:47.476  INFO 12216 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:18:48.101  INFO 12216 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:18:48.167  INFO 12216 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:18:48.848  INFO 12216 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:18:48.858  INFO 12216 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:18:48.858  INFO 12216 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:18:48.950  INFO 12216 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:18:48.950  INFO 12216 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1474 ms
+2021-03-30 15:18:49.118  INFO 12216 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:18:49.170  INFO 12216 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:18:49.292  INFO 12216 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:18:49.392  INFO 12216 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:18:49.685  INFO 12216 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:18:49.700  INFO 12216 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:18:51.545  INFO 12216 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:18:51.566  INFO 12216 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:18:51.591  INFO 12216 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:18:52.006  INFO 12216 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:18:52.025  INFO 12216 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:18:52.027  INFO 12216 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:18:52.067  WARN 12216 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:18:52.161  INFO 12216 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:18:52.418  INFO 12216 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:18:52.426  INFO 12216 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.454 seconds (JVM running for 6.589)
+2021-03-30 15:18:59.271  INFO 12216 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:18:59.271  INFO 12216 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:18:59.273  INFO 12216 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2021-03-30 15:18:59.311  INFO 12216 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:18:59.331  INFO 12216 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:18:59.332  INFO 12216 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:19:04.910  INFO 12216 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 15:19:04.946  INFO 12216 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:19:04.946  INFO 12216 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:19:10.981  INFO 12216 --- [http-nio-8080-exec-3] DataBaseConfig                           : Create DB connection
+2021-03-30 15:19:11.018  INFO 12216 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:19:11.019  INFO 12216 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:21:29.378  INFO 8720 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 8720 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:21:29.389  INFO 8720 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:21:29.457  INFO 8720 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:21:29.458  INFO 8720 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:21:30.194  INFO 8720 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:21:30.260  INFO 8720 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:21:30.905  INFO 8720 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:21:30.915  INFO 8720 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:21:30.916  INFO 8720 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:21:31.010  INFO 8720 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:21:31.010  INFO 8720 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1552 ms
+2021-03-30 15:21:31.191  INFO 8720 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:21:31.242  INFO 8720 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:21:31.368  INFO 8720 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:21:31.466  INFO 8720 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:21:31.745  INFO 8720 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:21:31.760  INFO 8720 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:21:33.290  INFO 8720 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:21:33.300  INFO 8720 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:21:33.318  INFO 8720 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:21:33.789  INFO 8720 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:21:33.809  INFO 8720 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:21:33.811  INFO 8720 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:21:33.858  WARN 8720 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:21:33.972  INFO 8720 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:21:34.271  INFO 8720 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:21:34.284  INFO 8720 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.423 seconds (JVM running for 6.553)
+2021-03-30 15:21:38.795  INFO 8720 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:21:38.795  INFO 8720 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:21:38.796  INFO 8720 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:21:38.836  INFO 8720 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:21:38.854  INFO 8720 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:21:38.856  INFO 8720 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:21:47.713  INFO 8720 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 15:21:47.729  INFO 8720 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:21:47.730  INFO 8720 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:24:02.349  INFO 12984 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 12984 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:24:02.359  INFO 12984 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:24:02.417  INFO 12984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:24:02.419  INFO 12984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:24:03.164  INFO 12984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:24:03.245  INFO 12984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:24:04.067  INFO 12984 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:24:04.081  INFO 12984 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:24:04.082  INFO 12984 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:24:04.202  INFO 12984 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:24:04.202  INFO 12984 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1782 ms
+2021-03-30 15:24:04.420  INFO 12984 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:24:04.482  INFO 12984 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:24:04.639  INFO 12984 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:24:04.752  INFO 12984 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:24:05.253  INFO 12984 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:24:05.270  INFO 12984 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:24:07.335  INFO 12984 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:24:07.349  INFO 12984 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:24:07.373  INFO 12984 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:24:07.882  INFO 12984 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:24:07.901  INFO 12984 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:24:07.903  INFO 12984 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:24:07.951  WARN 12984 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:24:08.071  INFO 12984 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:24:08.393  INFO 12984 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:24:08.403  INFO 12984 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 6.433 seconds (JVM running for 7.992)
+2021-03-30 15:24:13.060  INFO 12984 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:24:13.061  INFO 12984 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:24:13.062  INFO 12984 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:24:16.431  INFO 12984 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:26:46.462  WARN 12984 --- [HikariPool-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m10s952ms266µs600ns).
+2021-03-30 15:26:46.464  INFO 12984 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:26:46.494  INFO 12984 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:26:47.248  INFO 12984 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:26:47.250  INFO 12984 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:26:47.253  INFO 12984 --- [SpringContextShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2021-03-30 15:26:47.259  INFO 12984 --- [SpringContextShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2021-03-30 15:29:31.680  INFO 11764 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 11764 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:29:31.694  INFO 11764 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:29:31.756  INFO 11764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:29:31.756  INFO 11764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:29:32.481  INFO 11764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:29:32.544  INFO 11764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:29:33.222  INFO 11764 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:29:33.234  INFO 11764 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:29:33.235  INFO 11764 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:29:33.333  INFO 11764 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:29:33.334  INFO 11764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1577 ms
+2021-03-30 15:29:33.508  INFO 11764 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:29:33.560  INFO 11764 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:29:33.707  INFO 11764 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:29:33.810  INFO 11764 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:29:34.101  INFO 11764 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:29:34.118  INFO 11764 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:29:35.509  INFO 11764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:29:35.531  INFO 11764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:29:35.557  INFO 11764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:29:36.023  INFO 11764 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:29:36.046  INFO 11764 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:29:36.047  INFO 11764 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:29:36.101  WARN 11764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:29:36.212  INFO 11764 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:29:36.486  INFO 11764 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:29:36.493  INFO 11764 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.312 seconds (JVM running for 6.568)
+2021-03-30 15:29:41.685  INFO 11764 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:29:41.685  INFO 11764 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:29:41.686  INFO 11764 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2021-03-30 15:29:41.729  INFO 11764 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:29:41.761  INFO 11764 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:29:41.762  INFO 11764 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:29:53.429  INFO 11764 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 15:29:53.446  INFO 11764 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:29:53.447  INFO 11764 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:29:58.162  INFO 11764 --- [http-nio-8080-exec-3] DataBaseConfig                           : Create DB connection
+2021-03-30 15:29:58.183  INFO 11764 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:29:58.184  INFO 11764 --- [http-nio-8080-exec-3] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:30:37.041  INFO 14688 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 14688 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:30:37.052  INFO 14688 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:30:37.091  INFO 14688 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:30:37.092  INFO 14688 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:30:37.741  INFO 14688 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:30:37.803  INFO 14688 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:30:38.460  INFO 14688 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:30:38.473  INFO 14688 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:30:38.474  INFO 14688 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:30:38.589  INFO 14688 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:30:38.590  INFO 14688 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1498 ms
+2021-03-30 15:30:38.783  INFO 14688 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:30:38.832  INFO 14688 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:30:38.953  INFO 14688 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:30:39.044  INFO 14688 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:30:39.348  INFO 14688 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:30:39.371  INFO 14688 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:30:41.144  INFO 14688 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:30:41.154  INFO 14688 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:30:41.174  INFO 14688 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:30:41.618  INFO 14688 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:30:41.639  INFO 14688 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:30:41.641  INFO 14688 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:30:41.693  WARN 14688 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:30:41.800  INFO 14688 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:30:42.061  INFO 14688 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:30:42.070  INFO 14688 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.47 seconds (JVM running for 6.723)
+2021-03-30 15:30:45.732  INFO 14688 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:30:45.732  INFO 14688 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:30:45.734  INFO 14688 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:30:45.756  INFO 14688 --- [http-nio-8080-exec-1] c.s.s.c.PersonController                 : Affichage de la liste de personne
+2021-03-30 15:30:45.757  INFO 14688 --- [http-nio-8080-exec-1] c.s.s.s.PersonService                    : Récupération de la liste entière de personnes
+2021-03-30 15:30:49.947  INFO 14688 --- [http-nio-8080-exec-2] DataBaseConfig                           : Create DB connection
+2021-03-30 15:30:49.975  INFO 14688 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:30:49.976  INFO 14688 --- [http-nio-8080-exec-2] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:33:02.055  INFO 5984 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 5984 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:33:02.068  INFO 5984 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:33:02.131  INFO 5984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:33:02.132  INFO 5984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:33:02.823  INFO 5984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:33:02.892  INFO 5984 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:33:03.599  INFO 5984 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:33:03.612  INFO 5984 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:33:03.613  INFO 5984 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:33:03.718  INFO 5984 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:33:03.718  INFO 5984 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1585 ms
+2021-03-30 15:33:03.904  INFO 5984 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:33:03.964  INFO 5984 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:33:04.097  INFO 5984 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:33:04.194  INFO 5984 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:33:04.475  INFO 5984 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:33:04.493  INFO 5984 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:33:05.926  INFO 5984 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:33:05.935  INFO 5984 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:33:05.952  INFO 5984 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:33:06.397  INFO 5984 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:33:06.416  INFO 5984 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:33:06.418  INFO 5984 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:33:06.462  WARN 5984 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:33:06.570  INFO 5984 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:33:06.849  INFO 5984 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:33:06.858  INFO 5984 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.233 seconds (JVM running for 6.35)
+2021-03-30 15:33:10.691  INFO 5984 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:33:10.691  INFO 5984 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:33:10.692  INFO 5984 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:33:10.732  INFO 5984 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:33:10.762  INFO 5984 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:33:10.763  INFO 5984 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:33:18.419  INFO 5984 --- [http-nio-8080-exec-4] DataBaseConfig                           : Create DB connection
+2021-03-30 15:33:18.437  INFO 5984 --- [http-nio-8080-exec-4] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:33:18.438  INFO 5984 --- [http-nio-8080-exec-4] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:38:31.648  INFO 8812 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 8812 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:38:31.668  INFO 8812 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:38:31.721  INFO 8812 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:38:31.721  INFO 8812 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:38:32.378  INFO 8812 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:38:32.444  INFO 8812 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:38:33.093  INFO 8812 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:38:33.106  INFO 8812 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:38:33.106  INFO 8812 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:38:33.197  INFO 8812 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:38:33.197  INFO 8812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1475 ms
+2021-03-30 15:38:33.362  INFO 8812 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:38:33.409  INFO 8812 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:38:33.547  INFO 8812 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:38:33.649  INFO 8812 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:38:33.932  INFO 8812 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:38:33.946  INFO 8812 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:38:35.333  INFO 8812 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:38:35.347  INFO 8812 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:38:35.373  INFO 8812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:38:35.839  INFO 8812 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:38:35.860  INFO 8812 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:38:35.862  INFO 8812 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:38:35.912  WARN 8812 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:38:36.017  INFO 8812 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:38:36.358  INFO 8812 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:38:36.366  INFO 8812 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.161 seconds (JVM running for 6.332)
+2021-03-30 15:38:40.652  INFO 8812 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:38:40.652  INFO 8812 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:38:40.653  INFO 8812 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2021-03-30 15:38:40.692  INFO 8812 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:38:40.714  INFO 8812 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:38:40.714  INFO 8812 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:39:14.314  INFO 18500 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 18500 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:39:14.322  INFO 18500 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:39:14.364  INFO 18500 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:39:14.365  INFO 18500 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:39:14.980  INFO 18500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:39:15.043  INFO 18500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:39:15.707  INFO 18500 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:39:15.717  INFO 18500 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:39:15.718  INFO 18500 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:39:15.813  INFO 18500 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:39:15.813  INFO 18500 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1448 ms
+2021-03-30 15:39:16.014  INFO 18500 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:39:16.064  INFO 18500 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:39:16.188  INFO 18500 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:39:16.286  INFO 18500 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:39:16.569  INFO 18500 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:39:16.583  INFO 18500 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:39:17.866  INFO 18500 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:39:17.893  INFO 18500 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:39:17.925  INFO 18500 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:39:18.355  INFO 18500 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:39:18.374  INFO 18500 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:39:18.376  INFO 18500 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:39:18.421  WARN 18500 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:39:18.523  INFO 18500 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:39:18.790  INFO 18500 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:39:18.798  INFO 18500 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 4.872 seconds (JVM running for 5.978)
+2021-03-30 15:39:22.447  INFO 18500 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:39:22.447  INFO 18500 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:39:22.448  INFO 18500 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:39:22.493  INFO 18500 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:39:22.520  INFO 18500 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:39:22.521  INFO 18500 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:39:48.011  INFO 14716 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 14716 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:39:48.020  INFO 14716 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:39:48.068  INFO 14716 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:39:48.068  INFO 14716 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:39:48.735  INFO 14716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:39:48.798  INFO 14716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:39:49.446  INFO 14716 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:39:49.457  INFO 14716 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:39:49.457  INFO 14716 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:39:49.554  INFO 14716 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:39:49.554  INFO 14716 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1485 ms
+2021-03-30 15:39:49.713  INFO 14716 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:39:49.762  INFO 14716 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:39:49.886  INFO 14716 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:39:49.982  INFO 14716 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:39:50.257  INFO 14716 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:39:50.271  INFO 14716 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:39:52.407  INFO 14716 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:39:52.424  INFO 14716 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:39:52.446  INFO 14716 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:39:52.859  INFO 14716 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:39:52.886  INFO 14716 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:39:52.888  INFO 14716 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:39:52.928  WARN 14716 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:39:53.019  INFO 14716 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:39:53.275  INFO 14716 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:39:53.283  INFO 14716 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.67 seconds (JVM running for 6.749)
+2021-03-30 15:40:02.551  INFO 14716 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:40:02.552  INFO 14716 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:40:02.553  INFO 14716 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:40:02.594  INFO 14716 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:40:02.615  INFO 14716 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:40:02.616  INFO 14716 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:40:29.264  INFO 7564 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 7564 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:40:29.288  INFO 7564 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:40:29.332  INFO 7564 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:40:29.333  INFO 7564 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:40:29.968  INFO 7564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:40:30.033  INFO 7564 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:40:30.681  INFO 7564 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:40:30.693  INFO 7564 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:40:30.694  INFO 7564 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:40:30.789  INFO 7564 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:40:30.789  INFO 7564 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1456 ms
+2021-03-30 15:40:30.946  INFO 7564 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:40:30.995  INFO 7564 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:40:31.134  INFO 7564 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:40:31.244  INFO 7564 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:40:31.549  INFO 7564 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:40:31.565  INFO 7564 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:40:33.689  INFO 7564 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:40:33.712  INFO 7564 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:40:33.737  INFO 7564 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:40:34.157  INFO 7564 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:40:34.181  INFO 7564 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:40:34.183  INFO 7564 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:40:34.228  WARN 7564 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:40:34.332  INFO 7564 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:40:34.605  INFO 7564 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:40:34.613  INFO 7564 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 5.763 seconds (JVM running for 6.86)
+2021-03-30 15:40:38.785  INFO 7564 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:40:38.786  INFO 7564 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:40:38.786  INFO 7564 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2021-03-30 15:40:38.830  INFO 7564 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:40:38.849  INFO 7564 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:40:38.850  INFO 7564 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:41:20.133  INFO 18504 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Starting SafetynetalertsApplication using Java 15.0.1 on Clément with PID 18504 (C:\Users\clement\Desktop\safetynetalerts\target\classes started by clement in C:\Users\clement\Desktop\safetynetalerts)
+2021-03-30 15:41:20.143  INFO 18504 --- [restartedMain] c.s.s.SafetynetalertsApplication         : No active profile set, falling back to default profiles: default
+2021-03-30 15:41:20.204  INFO 18504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-30 15:41:20.205  INFO 18504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-30 15:41:21.011  INFO 18504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-30 15:41:21.086  INFO 18504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
+2021-03-30 15:41:21.799  INFO 18504 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-03-30 15:41:21.811  INFO 18504 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-03-30 15:41:21.811  INFO 18504 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-30 15:41:21.931  INFO 18504 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-03-30 15:41:21.932  INFO 18504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1726 ms
+2021-03-30 15:41:22.096  INFO 18504 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-30 15:41:22.147  INFO 18504 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-30 15:41:22.276  INFO 18504 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-30 15:41:22.380  INFO 18504 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-03-30 15:41:22.664  INFO 18504 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-03-30 15:41:22.679  INFO 18504 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-30 15:41:24.869  INFO 18504 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-30 15:41:24.893  INFO 18504 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-30 15:41:24.942  INFO 18504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-30 15:41:25.478  INFO 18504 --- [restartedMain] DataBaseConfig                           : Create DB connection
+2021-03-30 15:41:25.504  INFO 18504 --- [restartedMain] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:41:25.506  INFO 18504 --- [restartedMain] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:41:25.569  WARN 18504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 15:41:25.721  INFO 18504 --- [restartedMain] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-30 15:41:26.096  INFO 18504 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-30 15:41:26.104  INFO 18504 --- [restartedMain] c.s.s.SafetynetalertsApplication         : Started SafetynetalertsApplication in 6.599 seconds (JVM running for 7.986)
+2021-03-30 15:41:31.604  INFO 18504 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-30 15:41:31.605  INFO 18504 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-03-30 15:41:31.607  INFO 18504 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-03-30 15:41:31.646  INFO 18504 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:41:31.684  INFO 18504 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:41:31.685  INFO 18504 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:41:40.181  INFO 18504 --- [http-nio-8080-exec-4] DataBaseConfig                           : Create DB connection
+2021-03-30 15:41:40.200  INFO 18504 --- [http-nio-8080-exec-4] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:41:40.201  INFO 18504 --- [http-nio-8080-exec-4] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:41:45.116  INFO 18504 --- [http-nio-8080-exec-5] DataBaseConfig                           : Create DB connection
+2021-03-30 15:41:45.133  INFO 18504 --- [http-nio-8080-exec-5] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:41:45.134  INFO 18504 --- [http-nio-8080-exec-5] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:41:49.626  INFO 18504 --- [http-nio-8080-exec-8] DataBaseConfig                           : Create DB connection
+2021-03-30 15:41:49.645  INFO 18504 --- [http-nio-8080-exec-8] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:41:49.646  INFO 18504 --- [http-nio-8080-exec-8] DataBaseConfig                           : Closing DB connection
+2021-03-30 15:42:14.071  INFO 18504 --- [http-nio-8080-exec-1] DataBaseConfig                           : Create DB connection
+2021-03-30 15:42:14.087  INFO 18504 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing prepared Statement
+2021-03-30 15:42:14.088  INFO 18504 --- [http-nio-8080-exec-1] DataBaseConfig                           : Closing DB connection

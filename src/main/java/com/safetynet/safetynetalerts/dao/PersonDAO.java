@@ -41,7 +41,7 @@ public class PersonDAO {
             }
             dataBaseConfig.closePreparedStatement(ps);
         }catch (Exception e){
-            logger.info("Error getting all persons");
+            logger.error("Error getting all persons");
         }finally {
             dataBaseConfig.closeConnection(con);
         }

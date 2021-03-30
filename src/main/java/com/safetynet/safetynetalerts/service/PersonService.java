@@ -1,9 +1,11 @@
 package com.safetynet.safetynetalerts.service;
 
+import com.safetynet.safetynetalerts.controller.HomeController;
 import com.safetynet.safetynetalerts.model.Person;
 import com.safetynet.safetynetalerts.repository.PersonRepository;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +15,7 @@ import java.util.Optional;
 @Service
 public class PersonService {
 
-    private static final Logger logger = LogManager.getLogger("PersonService");
+    Logger logger = LoggerFactory.getLogger(PersonService.class);
 
     @Autowired
     private PersonRepository personRepository;
@@ -39,4 +41,5 @@ public class PersonService {
     public Iterable<Person> save(List<Person> persons){
         return personRepository.saveAll(persons);
     }
+
 }

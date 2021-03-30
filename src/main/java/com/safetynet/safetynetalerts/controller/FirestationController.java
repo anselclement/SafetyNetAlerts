@@ -2,14 +2,15 @@ package com.safetynet.safetynetalerts.controller;
 
 import com.safetynet.safetynetalerts.dao.FirestationDAO;
 import com.safetynet.safetynetalerts.model.Firestation;
+import com.safetynet.safetynetalerts.model.Person;
 import com.safetynet.safetynetalerts.service.FirestationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
@@ -61,9 +62,15 @@ public class FirestationController {
 
     @GetMapping("/firestations{stationNumber}")
     public String listPersonsCoveredByFirestation(@RequestParam(value = "stationNumber") String station, Model model){
-        List listPersonsCoveredByFirestation = firestationDAO.getListPersonsCoveredByFirestation(station);
+        HashMap listPersonsCoveredByFirestation = firestationDAO.getListPersonsCoveredByFirestation(station);
         model.addAttribute("listPersonsCoveredByFirestation", listPersonsCoveredByFirestation);
         return "/personsCoveredByFirestation";
     }
 
+    @GetMapping("/phoneAlert{firestation}")
+    public String listPersonsPhoneNumberCoveredByFirestationAddress(@RequestParam(value = "firestation") String station, Model model){
+        List listPersonsPhoneNumberCoveredByFirestationAddress = firestationDAO.getPersonsPhoneNumberCoveredByFirestationAddress(station);
+        model.addAttribute("listPersonsPhoneNumberCoveredByFirestationAddress", listPersonsPhoneNumberCoveredByFirestationAddress);
+        return "/personsPhoneCoveredByFirestation";
+    }
 }

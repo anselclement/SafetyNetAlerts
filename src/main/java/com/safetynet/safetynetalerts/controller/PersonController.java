@@ -2,10 +2,10 @@ package com.safetynet.safetynetalerts.controller;
 
 import com.safetynet.safetynetalerts.dao.PersonDAO;
 import com.safetynet.safetynetalerts.model.Person;
-import com.safetynet.safetynetalerts.service.FirestationService;
 import com.safetynet.safetynetalerts.service.PersonService;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +19,7 @@ import java.util.Optional;
 @Controller
 public class PersonController {
 
-    private static final Logger logger = LogManager.getLogger("PersonController");
+    private static final Logger logger = LoggerFactory.getLogger(PersonController.class);
 
     @Autowired
     private PersonService personService;
@@ -30,7 +30,7 @@ public class PersonController {
     @GetMapping("/person")
 
     public Iterable<Person> getPersons(Model model) {
-
+        logger.info("Affichage de la liste de personne");
         Iterable<Person> listPersons = personService.getPersons();
 
         model.addAttribute("persons",listPersons);

@@ -1,9 +1,11 @@
 package com.safetynet.safetynetalerts.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.Generated;
 
 import javax.persistence.*;
+import java.sql.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,22 +24,23 @@ public class Medicalrecord {
     @Column(name = "last_name")
     private String lastName;
 
-    private String birthdate;
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private Date birthdate;
 
+    private int age;
 
-    //TODO : delete cascade
     @ElementCollection
     @CollectionTable(name = "medicalrecord_medications", joinColumns = @JoinColumn(name = "medicalrecord_id"))
     private List<String> medications;
 
-    //TODO : delete cascade
+
     @ElementCollection
     @CollectionTable(name = "medicalrecord_allergies", joinColumns = @JoinColumn(name = "medicalrecord_id"))
     private List<String> allergies;
 
     public Medicalrecord(){}
 
-    public Medicalrecord(Long id, String firstName, String lastName, String birthdate, List<String> medications, List<String> allergies){}
+    public Medicalrecord(Long id, String firstName, String lastName, Date birthdate, int age, List<String> medications, List<String> allergies){}
 
     @Override
     @Generated

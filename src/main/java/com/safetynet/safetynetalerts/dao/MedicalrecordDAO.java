@@ -4,22 +4,33 @@ import com.safetynet.safetynetalerts.config.DataBaseConfig;
 import com.safetynet.safetynetalerts.model.Medicalrecord;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class MedicalrecordDAO {
 
     private static final Logger logger = LogManager.getLogger("MedicalrecordDAO");
 
     public DataBaseConfig dataBaseConfig = new DataBaseConfig();
 
+    private Medicalrecord medicalrecord;
+
+    public int calculateAge(LocalDate birthdate, LocalDate currentDate){
+        return Period.between(birthdate, currentDate).getYears();
+    }
+
     public List<Medicalrecord> getMedicalrecords(){
 
         Connection con = null;
+        LocalDate currentDate = LocalDate.now();
         List<Medicalrecord> medicalrecords = new ArrayList<>();
         try{
             con = dataBaseConfig.getConnection();
@@ -30,7 +41,8 @@ public class MedicalrecordDAO {
                 medicalrecord.setId(rs.getLong("id"));
                 medicalrecord.setFirstName(rs.getString("first_name"));
                 medicalrecord.setLastName(rs.getString("last_name"));
-                medicalrecord.setBirthdate(rs.getString("birthdate"));
+                medicalrecord.setBirthdate(rs.getDate("birthdate"));
+                medicalrecord.setAge(calculateAge(medicalrecord.getBirthdate().toLocalDate(), currentDate));
                 medicalrecords.add(medicalrecord);
             }
             dataBaseConfig.closePreparedStatement(ps);

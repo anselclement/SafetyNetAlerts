@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @Repository
@@ -44,16 +45,17 @@ public class FirestationDAO {
         return firestations;
     }
 
-    public List getListPersonsCoveredByFirestation(String stationNumber){
+    public HashMap getListPersonsCoveredByFirestation(String stationNumber){
 
         Connection con = null;
+        HashMap PersonsCoveredByFirestationAndCount = new HashMap();
         List<Person> listPersonsCoveredByFirestation = new ArrayList<>();
+        int countAdult = 0;
+        int countChild = 0;
         try{
             con = dataBaseConfig.getConnection();
-            PreparedStatement ps = con.prepareStatement("SELECT persons.first_name, persons.last_name, persons.address, persons.phone FROM persons " +
-                    "INNER JOIN firestations " +
-                    "INNER JOIN medicalrecords ON persons.first_name = medicalrecords.first_name " +
-                    "WHERE persons.address = firestations.address AND firestations.station = ?");
+            PreparedStatement ps = con.prepareStatement("SELECT p.first_name, p.last_name, p.address, p.phone, m.age FROM persons p, firestations f, medicalrecords m" +
+                    " WHERE p.first_name = m.first_name AND p.address = f.address AND f.station = ?");
             ps.setString(1, stationNumber);
             ResultSet rs = ps.executeQuery();
             while (rs.next()){
@@ -62,14 +64,45 @@ public class FirestationDAO {
                 person.setLastName(rs.getString("last_name"));
                 person.setAddress(rs.getString("address"));
                 person.setPhone(rs.getString("phone"));
+                if(rs.getInt("age") > 18){
+                    countAdult++;
+                }else{
+                    countChild++;
+                }
                 listPersonsCoveredByFirestation.add(person);
+                PersonsCoveredByFirestationAndCount.put("person", listPersonsCoveredByFirestation);
             }
+            PersonsCoveredByFirestationAndCount.put("countAdult", countAdult);
+            PersonsCoveredByFirestationAndCount.put("countChild", countChild);
             dataBaseConfig.closePreparedStatement(ps);
         }catch (Exception e){
             logger.info("Error getting all persons covered by firestation");
         }finally {
             dataBaseConfig.closeConnection(con);
         }
-        return listPersonsCoveredByFirestation;
+        return PersonsCoveredByFirestationAndCount;
     }
+
+    public List getPersonsPhoneNumberCoveredByFirestationAddress(String address){
+
+        Connection con = null;
+        List listPersonsPhoneNumberCoveredByFirestation = new ArrayList<>();
+        try{
+            con = dataBaseConfig.getConnection();
+            PreparedStatement ps = con.prepareStatement("Select p.phone from persons p, firestations f where p.address = f.address" +
+                    " and f.station = ?");
+            ps.setString(1, address);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()){
+                listPersonsPhoneNumberCoveredByFirestation.add(rs.getString("phone"));
+            }
+            dataBaseConfig.closePreparedStatement(ps);
+        }catch (Exception e){
+            logger.info("Error getting persons phone number covered by firestation address");
+        }finally {
+            dataBaseConfig.closeConnection(con);
+        }
+        return listPersonsPhoneNumberCoveredByFirestation;
+    }
+
 }

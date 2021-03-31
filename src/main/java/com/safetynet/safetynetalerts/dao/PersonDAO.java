@@ -3,8 +3,8 @@ package com.safetynet.safetynetalerts.dao;
 import com.safetynet.safetynetalerts.config.DataBaseConfig;
 import com.safetynet.safetynetalerts.model.Medicalrecord;
 import com.safetynet.safetynetalerts.model.Person;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
@@ -17,7 +17,7 @@ import java.util.List;
 @Repository
 public class PersonDAO {
 
-    private static final Logger logger = LogManager.getLogger("PersonDAO");
+    private static final Logger logger = LoggerFactory.getLogger(PersonDAO.class);
 
     public DataBaseConfig dataBaseConfig = new DataBaseConfig();
 
@@ -56,7 +56,7 @@ public class PersonDAO {
         List listEmail = new ArrayList<>();
         try{
             con = dataBaseConfig.getConnection();
-            PreparedStatement ps = con.prepareStatement("Select email from persons where city = ?");
+            PreparedStatement ps = con.prepareStatement("Select distinct email from persons where city = ?");
             ps.setString(1, city);
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
@@ -64,7 +64,7 @@ public class PersonDAO {
             }
             dataBaseConfig.closePreparedStatement(ps);
         } catch (Exception e) {
-            logger.info("Error getting email");
+            logger.error("Error getting email");
         } finally{
             dataBaseConfig.closeConnection(con);
         }

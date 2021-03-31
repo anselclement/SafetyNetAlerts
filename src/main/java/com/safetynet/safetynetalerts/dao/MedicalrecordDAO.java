@@ -2,8 +2,9 @@ package com.safetynet.safetynetalerts.dao;
 
 import com.safetynet.safetynetalerts.config.DataBaseConfig;
 import com.safetynet.safetynetalerts.model.Medicalrecord;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
@@ -17,7 +18,7 @@ import java.util.List;
 @Repository
 public class MedicalrecordDAO {
 
-    private static final Logger logger = LogManager.getLogger("MedicalrecordDAO");
+    private static final Logger logger = LoggerFactory.getLogger(MedicalrecordDAO.class);
 
     public DataBaseConfig dataBaseConfig = new DataBaseConfig();
 

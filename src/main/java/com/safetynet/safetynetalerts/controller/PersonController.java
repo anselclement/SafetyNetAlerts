@@ -3,7 +3,7 @@ package com.safetynet.safetynetalerts.controller;
 import com.safetynet.safetynetalerts.dao.PersonDAO;
 import com.safetynet.safetynetalerts.model.Person;
 import com.safetynet.safetynetalerts.service.PersonService;
-import org.apache.logging.log4j.LogManager;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,13 +29,10 @@ public class PersonController {
     private PersonDAO personDAO;
 
     @GetMapping("/person")
-
     public Iterable<Person> getPersons(Model model) {
-        logger.info("Affichage de la liste de personne");
         Iterable<Person> listPersons = personService.getPersons();
-
         model.addAttribute("persons",listPersons);
-
+        logger.info("Récupération de la liste de personne");
         return listPersons;
     }
 
@@ -43,27 +40,29 @@ public class PersonController {
     public String createPerson(Model model){
         Person person = new Person();
         model.addAttribute("person", person);
+        logger.info("Récupération du formulaire permettant de créer une personne");
         return "/form/formNewPerson";
     }
 
     @PostMapping("/savePerson")
     public ModelAndView savePerson(@ModelAttribute Person person){
         personService.savePerson(person);
+        logger.info("Sauvegarde des changements sur la personne en base de données");
         return new ModelAndView("redirect:/person");
     }
 
     @GetMapping("/updatePerson/{id}")
     public String updatePerson(@PathVariable("id") final Long id, Model model){
-        logger.info("Mise à jour de la person");
         Optional<Person> person = personService.getPerson(id);
         model.addAttribute("person", person);
+        logger.info("Récupération du formulaire permettant la mise à jour d'une personne");
         return "/form/formUpdatePerson";
     }
 
     @GetMapping("/deletePerson/{lastName}/{firstName}")
     public ModelAndView deleteByLastnameAndFirstname(@PathVariable("lastName") String lastName, @PathVariable("firstName") String firstName){
         personService.deleteByLastNameAndFirstName(lastName, firstName);
-        logger.info("Récupération de la personne à supprimer" + lastName + " " + firstName);
+        logger.info("Récupération de la personne à supprimer " + lastName + " " + firstName);
         return new ModelAndView("redirect:/person");
     }
 
@@ -71,6 +70,7 @@ public class PersonController {
     public String listPersonsEmailByCity(@RequestParam(value = "city") String city, Model model){
         List listPersonsEmailByCity = personDAO.getPersonsEmailByCity(city);
         model.addAttribute("listPersonsEmailByCity", listPersonsEmailByCity);
+        logger.info("Récupération de la liste des e-mails de la ville" + city);
         return "/personsEmailByCity";
     }
 
@@ -78,6 +78,7 @@ public class PersonController {
     public String ChildListAtGivenAddressWithMembersOfFamily(@RequestParam(value = "address") String address, Model model){
         HashMap ChildListAtGivenAddressWithMembersOfFamily = personDAO.getChildListAtGivenAddressWithMembersOfFamily(address);
         model.addAttribute("ChildListAtGivenAddressWithMembersOfFamily", ChildListAtGivenAddressWithMembersOfFamily);
+        logger.info("Récupération des enfants vivant à l'adresse" + address);
         return "/ChildListAtGivenAddress";
     }
 }

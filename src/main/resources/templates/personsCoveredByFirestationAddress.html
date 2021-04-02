@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Personnes couvertes par la caserne</title>
+    <link th:href="@{webjars/bootstrap/4.3.1/css/bootstrap.min.css}" th:rel="stylesheet">
+</head>
+<body>
+<h1>Personnes couvertes par la caserne</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Phone</th>
+        <th>Age</th>
+        <th>station</th>
+        <th>Medications</th>
+        <th>Allergies</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="mapItem : ${listPersonsAtThisAddressWithStationNumber}">
+        <td><span th:text="${mapItem.lastName}"> Nom </span></td>
+        <td><span th:text="${mapItem.firstName}"> Prénom </span></td>
+        <td><span th:text="${mapItem.phone}"> Phone </span></td>
+        <td><span th:text="${mapItem.age}"> Age </span></td>
+        <td><span th:text="${mapItem.station}"> station </span></td>
+        <td><span th:text="${mapItem.medications}"> Medications </span></td>
+        <td><span th:text="${mapItem.allergies}"> Allergies </span></td>
+    </tr>
+    </tbody>
+</table>
+<script th:src="@{webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

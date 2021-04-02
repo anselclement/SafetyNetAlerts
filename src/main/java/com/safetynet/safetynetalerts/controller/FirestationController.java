@@ -2,6 +2,7 @@ package com.safetynet.safetynetalerts.controller;
 
 import com.safetynet.safetynetalerts.dao.FirestationDAO;
 import com.safetynet.safetynetalerts.model.Firestation;
+import com.safetynet.safetynetalerts.model.HomesInfo;
 import com.safetynet.safetynetalerts.service.FirestationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -67,25 +68,33 @@ public class FirestationController {
 
     @GetMapping("/firestations{stationNumber}")
     public String listPersonsCoveredByFirestation(@RequestParam(value = "stationNumber") String station, Model model){
-        HashMap listPersonsCoveredByFirestation = firestationDAO.getListPersonsCoveredByFirestation(station);
+        HashMap listPersonsCoveredByFirestation = firestationDAO.getPersonsCoveredByFirestation(station);
         model.addAttribute("listPersonsCoveredByFirestation", listPersonsCoveredByFirestation);
         logger.info("Récupération des personnes couvertes par le numéro de caserne " + station);
         return "/personsCoveredByFirestation";
     }
 
     @GetMapping("/phoneAlert{firestation}")
-    public String listPersonsPhoneNumberCoveredByFirestationAddress(@RequestParam(value = "firestation") String station, Model model){
-        List listPersonsPhoneNumberCoveredByFirestationAddress = firestationDAO.getPersonsPhoneNumberCoveredByFirestationAddress(station);
-        model.addAttribute("listPersonsPhoneNumberCoveredByFirestationAddress", listPersonsPhoneNumberCoveredByFirestationAddress);
+    public String listPersonsPhoneNumberCoveredByFirestationNumber(@RequestParam(value = "firestation") String station, Model model){
+        List listPersonsPhoneNumberCoveredByFirestationNumber = firestationDAO.getPersonsPhoneNumberCoveredByFirestationNumber(station);
+        model.addAttribute("listPersonsPhoneNumberCoveredByFirestationAddress", listPersonsPhoneNumberCoveredByFirestationNumber);
         logger.info("Récupération des numéros de téléphone des personnes couvertes par la caserne numéro " + station);
         return "/personsPhoneCoveredByFirestation";
     }
 
     @GetMapping("/fire{address}")
-    public String listPersonsAtThisAddressWithStationNumber(@RequestParam(value = "address") String address, Model model){
-        HashMap listPersonsAtThisAddressWithStationNumber = firestationDAO.getPersonsAtThisAddressWithStationNumber(address);
+    public String listPersonsCoveredByFirestationAddress(@RequestParam(value = "address") String address, Model model){
+        List listPersonsAtThisAddressWithStationNumber = firestationDAO.getPersonsCoveredByFirestationAddress(address);
         model.addAttribute("listPersonsAtThisAddressWithStationNumber", listPersonsAtThisAddressWithStationNumber);
         logger.info("Récupération des personnes vivants à l'adresse " + address + " ainsi que le numéro de la caserne les desservant");
-        return "/personsAddressWithStationNumber";
+        return "/personsCoveredByFirestationAddress";
+    }
+
+    @GetMapping("/flood/stations{station}")
+    public String personsHomesCoveredByFirestationNumber(@RequestParam(value = "station") String station, Model model){
+        List<HomesInfo> listPersonsHomesCoveredByFirestationNumber = firestationDAO.getPersonsHomesCoveredByFirestationNumber(station);
+        model.addAttribute("listPersonsHomesCoveredByFirestationNumber", listPersonsHomesCoveredByFirestationNumber);
+        logger.info("Récupération des personnes couvertes par le numéro de caserne " + station);
+        return "/personsHomesCoveredByFirestationNumber";
     }
 }

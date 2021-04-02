@@ -12,6 +12,6 @@ public interface MedicalrecordRepository extends JpaRepository<Medicalrecord, Lo
 
     @Transactional
     @Modifying
-    @Query(value = "DELETE FROM persons p WHERE p.last_name=?1 AND p.first_name=?2", nativeQuery = true)
+    @Query(value = "DELETE FROM medicalrecords m WHERE m.last_name=?1 AND m.first_name=?2", nativeQuery = true)
     void deleteByLastNameAndFirstName(String lastName, String firstName);
 }

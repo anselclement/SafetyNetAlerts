@@ -1,6 +1,7 @@
 package com.safetynet.safetynetalerts.unitaire.controller;
 
 import com.safetynet.safetynetalerts.controller.FirestationController;
+import com.safetynet.safetynetalerts.dao.FirestationDAO;
 import com.safetynet.safetynetalerts.repository.FirestationRepository;
 import com.safetynet.safetynetalerts.service.FirestationService;
 import com.safetynet.safetynetalerts.service.MedicalrecordService;
@@ -33,6 +34,9 @@ public class FirestationControllerTests {
 
     @MockBean
     private MedicalrecordService medicalrecordService;
+
+    @MockBean
+    private FirestationDAO firestationDAO;
 
     @Test
     public void getFirestationsTest() throws Exception{
@@ -67,6 +71,27 @@ public class FirestationControllerTests {
         mockMvc.perform(get("/deleteFirestation/1"))
                 .andExpect(status().is3xxRedirection())
                 .andExpect(view().name("redirect:/firestation"));
+    }
+
+    @Test
+    public void listPersonsPhoneNumberCoveredByFirestationAddressTest() throws Exception{
+        mockMvc.perform(get("/phoneAlert?firestation=address"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("/personsPhoneCoveredByFirestation"));
+    }
+
+    @Test
+    public void listPersonsCoveredByFirestationAddressTest() throws Exception{
+        mockMvc.perform(get("/fire?address=address"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("/personsCoveredByFirestationAddress"));
+    }
+
+    @Test
+    public  void listPersonsHomesCoveredByFirestationNumberTest() throws Exception{
+        mockMvc.perform(get("/flood/stations?station=4"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("/personsHomesCoveredByFirestationNumber"));
     }
 
 }

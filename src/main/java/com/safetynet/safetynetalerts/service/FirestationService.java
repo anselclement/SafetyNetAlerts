@@ -13,12 +13,13 @@ import java.util.Optional;
 @Service
 public class FirestationService {
 
-    private static Logger logger = LoggerFactory.getLogger(FirestationRepository.class);
+    private static Logger logger = LoggerFactory.getLogger(FirestationService.class);
 
     @Autowired
     private FirestationRepository firestationRepository;
 
     public Optional<Firestation> getFirestation(final Long id){
+        logger.info("Récupération de la caserne grâce à son id " + id);
         return firestationRepository.findById(id);
     }
 
@@ -28,14 +29,17 @@ public class FirestationService {
     }
 
     public void deleteFirestation(final Long id){
+        logger.info("Suppression de la caserne grâce à son id " + id);
         firestationRepository.deleteById(id);
     }
 
     public Firestation saveFirestation(Firestation firestation){
+        logger.info("Sauvegarde la caserne");
         return  firestationRepository.save(firestation);
     }
 
     public Iterable<Firestation> save(List<Firestation> firestations){
+        logger.info("Sauvegarde de toutes les casernes");
         return firestationRepository.saveAll(firestations);
     }
 }

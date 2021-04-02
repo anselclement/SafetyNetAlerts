@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>E-mail personnes</title>
+    <link th:href="@{webjars/bootstrap/4.3.1/css/bootstrap.min.css}" th:rel="stylesheet">
+</head>
+<body>
+<h1>E-mail des personnes de la ville :</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>E-mail</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${listPersonsEmailByCity.empty}">
+        <td colspan="3">Aucun email !</td>
+    </tr>
+    <tr th:each="listPersonsEmailByCity: ${listPersonsEmailByCity}">
+        <td><span th:text="${listPersonsEmailByCity}"> E-mail </span></td>
+    </tr>
+    </tbody>
+</table>
+<script th:src="@{webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

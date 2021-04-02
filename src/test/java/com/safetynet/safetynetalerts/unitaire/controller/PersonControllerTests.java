@@ -5,6 +5,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import com.safetynet.safetynetalerts.controller.PersonController;
+import com.safetynet.safetynetalerts.dao.PersonDAO;
 import com.safetynet.safetynetalerts.service.FirestationService;
 import com.safetynet.safetynetalerts.service.MedicalrecordService;
 import com.safetynet.safetynetalerts.service.PersonService;
@@ -31,6 +32,8 @@ public class PersonControllerTests {
     @MockBean
     private MedicalrecordService medicalrecordService;
 
+    @MockBean
+    private PersonDAO personDAO;
 
     @Test
     public void getPersonsTest() throws Exception{
@@ -67,4 +70,10 @@ public class PersonControllerTests {
                 .andExpect(view().name("redirect:/person"));
     }
 
+    @Test
+    public void listPersonsEmailByCityTest() throws Exception{
+        mockMvc.perform(get("/communityEmail?city=city"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("/personsEmailByCity"));
+    }
 }

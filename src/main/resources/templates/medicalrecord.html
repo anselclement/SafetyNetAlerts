@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="container-fluid special">
-    <h2 class="h2">Liste des personnes</h2>
+    <h2 class="h2">Liste des dossiers Médicaux</h2>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -15,6 +15,7 @@
                 <th>Prénom</th>
                 <th>Nom</th>
                 <th>Date de naissance</th>
+                <th>Age</th>
                 <th>Médicaments</th>
                 <th>Allergies</th>
                 <th>Action</th>
@@ -28,6 +29,7 @@
                     <td><span th:text="${medicalrecord.firstName}"> Prénom </span></td>
                     <td><span th:text="${medicalrecord.lastName}"> Nom </span></td>
                     <td><span th:text="${medicalrecord.birthdate}"> Date de naissance </span></td>
+                    <td><span th:text="${medicalrecord.age}"> Age </span></td>
                     <td><span th:text="${medicalrecord.medications}"> Médicaments </span>
                     <td><span th:text="${medicalrecord?.allergies}"> Allergies </span></td>
                     <td>
@@ -39,6 +41,21 @@
         </table>
     </div>
     <a th:href="@{/createMedicalrecord}"><button class="btn btn-success">Ajouter un nouveau dossier médical</button></a>
+
+    <div class="container">
+        <h6>Sélectionner le Nom Prénom d'un personne pour voir toutes ses informations :</h6>
+        <form class="form-group" th:action="@{/personInfo{firstName}(firstName=${firstName}){lastName}(lastName=${lastName})}" method="get">
+            <select class="form-control" name="firstName">
+                <option value="">Sélectionner le prénom</option>
+                <option th:each="medicalrecord : ${medicalrecords}" th:value="${medicalrecord.firstName}" th:text="${medicalrecord.firstName}"></option>
+            </select>
+            <select class="form-control" name="lastName">
+                <option value="">Sélectionner le nom</option>
+                <option th:each="medicalrecord : ${medicalrecords}" th:value="${medicalrecord.lastName}" th:text="${medicalrecord.lastName}"></option>
+            </select>
+            <button class="btn btn-primary" type="submit">Valider</button>
+        </form>
+    </div>
 </div>
 <script th:src="@{webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
 </body>

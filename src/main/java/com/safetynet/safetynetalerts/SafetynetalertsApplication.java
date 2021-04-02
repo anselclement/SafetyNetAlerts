@@ -8,8 +8,8 @@ import com.safetynet.safetynetalerts.model.DataContainer;
 import com.safetynet.safetynetalerts.service.FirestationService;
 import com.safetynet.safetynetalerts.service.MedicalrecordService;
 import com.safetynet.safetynetalerts.service.PersonService;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,6 +18,8 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class SafetynetalertsApplication {
+
+	private static Logger logger = LoggerFactory.getLogger(SafetynetalertsApplication.class);
 
 	@Autowired
 	private PersonService personService;
@@ -41,15 +43,15 @@ public class SafetynetalertsApplication {
 			personService.save(dataContainer.getPersons());
 			firestationService.save(dataContainer.getFirestations());
 			medicalrecordService.save(dataContainer.getMedicalrecords());
+			logger.info("Sauvegarde de toutes les données du fichier data.json en Base de données");
+		}else{
+			logger.error("Erreur lors de la sauvegarde des données");
 		}
 	}
 
-	@Bean
-	public Logger logger(){
-		return LogManager.getRootLogger();
-	}
 
 	public static void main(String[] args) {
+		logger.info("Démarrage de l'application SafetyNetAlerts !");
 		SpringApplication.run(SafetynetalertsApplication.class, args);
 	}
 

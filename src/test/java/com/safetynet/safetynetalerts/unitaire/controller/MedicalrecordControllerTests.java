@@ -1,10 +1,12 @@
 package com.safetynet.safetynetalerts.unitaire.controller;
 
 import com.safetynet.safetynetalerts.controller.MedicalrecordController;
+import com.safetynet.safetynetalerts.dao.MedicalrecordDAO;
 import com.safetynet.safetynetalerts.service.FirestationService;
 import com.safetynet.safetynetalerts.service.MedicalrecordService;
 import com.safetynet.safetynetalerts.service.PersonService;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -29,6 +31,9 @@ public class MedicalrecordControllerTests {
 
     @MockBean
     private FirestationService firestationService;
+
+    @MockBean
+    private MedicalrecordDAO medicalrecordDAO;
 
     @Test
     public void getMedicalrecordsTest() throws Exception{
@@ -63,5 +68,4 @@ public class MedicalrecordControllerTests {
                 .andExpect(status().is3xxRedirection())
                 .andExpect(view().name("redirect:/medicalrecord"));
     }
-
 }

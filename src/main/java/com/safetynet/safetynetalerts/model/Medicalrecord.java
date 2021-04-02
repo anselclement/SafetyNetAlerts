@@ -1,6 +1,7 @@
 package com.safetynet.safetynetalerts.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.sun.istack.NotNull;
 import lombok.Data;
 import lombok.Generated;
 

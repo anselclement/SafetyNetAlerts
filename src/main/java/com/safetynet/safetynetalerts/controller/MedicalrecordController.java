@@ -1,5 +1,6 @@
 package com.safetynet.safetynetalerts.controller;
 
+import com.safetynet.safetynetalerts.dao.MedicalrecordDAO;
 import com.safetynet.safetynetalerts.model.Medicalrecord;
 import com.safetynet.safetynetalerts.service.MedicalrecordService;
 import org.slf4j.Logger;
@@ -10,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.HashMap;
 import java.util.Optional;
 
 @Controller
@@ -19,6 +21,9 @@ public class MedicalrecordController {
 
     @Autowired
     private MedicalrecordService medicalrecordService;
+
+    @Autowired
+    private MedicalrecordDAO medicalrecordDAO;
 
     @GetMapping("/medicalrecord")
     public Iterable<Medicalrecord> getMedicalrecords(Model model) {
@@ -54,7 +59,15 @@ public class MedicalrecordController {
     @GetMapping("/deleteMedicalrecord/{lastName}/{firstName}")
     public ModelAndView deleteByLastnameAndFirstname(@PathVariable("lastName") String lastName, @PathVariable("firstName") String firstName){
         medicalrecordService.deleteByLastNameAndFirstName(lastName, firstName);
-        logger.info("Récupération du dossier médical de la personne à supprimer" + lastName + " " + firstName);
+        logger.info("Récupération du dossier médical de la personne à supprimer " + lastName + " " + firstName);
         return new ModelAndView("redirect:/medicalrecord");
+    }
+
+    @GetMapping("/personInfo{firstName}{lastName}")
+    public String personInfosByLastNameAndFirstName(@RequestParam(value = "firstName") String lastName, @RequestParam(value = "lastName") String firstName, Model model){
+        HashMap personInfosByLastNameAndFirstName = medicalrecordDAO.getPersonsInfoByLastNameAndFirstName(firstName, lastName);
+        model.addAttribute("personInfosByLastNameAndFirstName", personInfosByLastNameAndFirstName);
+        logger.info("Récupération du nom, de l'adresse, du mail, de l'age et des antécédents de la personne grâce à son nom et prénom");
+        return "/personInfosByLastNameAndFirstName";
     }
 }

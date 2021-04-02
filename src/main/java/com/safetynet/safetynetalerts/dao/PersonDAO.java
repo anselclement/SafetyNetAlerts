@@ -71,7 +71,7 @@ public class PersonDAO {
         return listEmail;
     }
 
-    public HashMap getChildListAtGivenAddressWithMembersOfFamily(String address){
+    public HashMap getChildAtGivenAddressWithMembersOfFamily(String address){
 
         Connection con = null;
         HashMap childListAtGivenAddressWithMembersOfFamily = new HashMap();

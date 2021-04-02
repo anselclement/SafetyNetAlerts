@@ -70,4 +70,10 @@ public class PersonControllerTests {
                 .andExpect(view().name("redirect:/person"));
     }
 
+    @Test
+    public void listPersonsEmailByCityTest() throws Exception{
+        mockMvc.perform(get("/communityEmail?city=city"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("/personsEmailByCity"));
+    }
 }

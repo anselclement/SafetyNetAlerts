@@ -73,4 +73,25 @@ public class FirestationControllerTests {
                 .andExpect(view().name("redirect:/firestation"));
     }
 
+    @Test
+    public void listPersonsPhoneNumberCoveredByFirestationAddressTest() throws Exception{
+        mockMvc.perform(get("/phoneAlert?firestation=address"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("/personsPhoneCoveredByFirestation"));
+    }
+
+    @Test
+    public void listPersonsCoveredByFirestationAddressTest() throws Exception{
+        mockMvc.perform(get("/fire?address=address"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("/personsCoveredByFirestationAddress"));
+    }
+
+    @Test
+    public  void listPersonsHomesCoveredByFirestationNumberTest() throws Exception{
+        mockMvc.perform(get("/flood/stations?station=4"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("/personsHomesCoveredByFirestationNumber"));
+    }
+
 }

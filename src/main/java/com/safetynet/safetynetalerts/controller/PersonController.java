@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
@@ -70,15 +71,15 @@ public class PersonController {
     public String listPersonsEmailByCity(@RequestParam(value = "city") String city, Model model){
         List listPersonsEmailByCity = personDAO.getPersonsEmailByCity(city);
         model.addAttribute("listPersonsEmailByCity", listPersonsEmailByCity);
-        logger.info("Récupération de la liste des e-mails de la ville" + city);
+        logger.info("Récupération de la liste des e-mails de la ville " + city);
         return "/personsEmailByCity";
     }
 
     @GetMapping("/childAlert{address}")
-    public String ChildListAtGivenAddressWithMembersOfFamily(@RequestParam(value = "address") String address, Model model){
-        HashMap ChildListAtGivenAddressWithMembersOfFamily = personDAO.getChildListAtGivenAddressWithMembersOfFamily(address);
+    public String ChildAtGivenAddressWithMembersOfFamily(@RequestParam(value = "address") String address, Model model){
+        HashMap ChildListAtGivenAddressWithMembersOfFamily = personDAO.getChildAtGivenAddressWithMembersOfFamily(address);
         model.addAttribute("ChildListAtGivenAddressWithMembersOfFamily", ChildListAtGivenAddressWithMembersOfFamily);
-        logger.info("Récupération des enfants vivant à l'adresse" + address);
+        logger.info("Récupération des enfants vivant à l'adresse " + address);
         return "/ChildListAtGivenAddress";
     }
 }

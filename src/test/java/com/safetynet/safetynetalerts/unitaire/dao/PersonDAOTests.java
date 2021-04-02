@@ -8,6 +8,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.HashMap;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -20,9 +21,22 @@ public class PersonDAOTests {
 
     @Test
     public void getPersonsTest(){
-
         List<Person> expectedListPersonDAO = personDAO.getPersons();
 
         assertThat(expectedListPersonDAO).isNotNull();
+    }
+
+    @Test
+    public void getPersonsEmailByCityTest(){
+        List expectedListPersonsEmailByCityTest = personDAO.getPersonsEmailByCity("Culver");
+
+        assertThat(expectedListPersonsEmailByCityTest).isNotNull();
+    }
+
+    @Test
+    public void getChildListAtGivenAddressWithMembersOfFamilyTest(){
+        HashMap expectedChildListAtGivenAddressWithMembersOfFamilyTest = personDAO.getChildAtGivenAddressWithMembersOfFamily("1509 Culver St");
+
+        assertThat(expectedChildListAtGivenAddressWithMembersOfFamilyTest).isNotNull();
     }
 }

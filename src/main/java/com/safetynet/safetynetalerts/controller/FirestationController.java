@@ -7,17 +7,13 @@ import com.safetynet.safetynetalerts.service.FirestationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Optional;
 
 
-@Controller
+@RestController
 public class FirestationController {
 
     private static final Logger logger = LoggerFactory.getLogger(FirestationController.class);
@@ -29,72 +25,55 @@ public class FirestationController {
     private FirestationDAO firestationDAO;
 
     @GetMapping("/firestation")
-    public Iterable<Firestation> getFirestations(Model model) {
+    public Iterable<Firestation> getFirestations() {
         Iterable<Firestation> listFireStations = firestationService.getFirestations();
-        model.addAttribute("firestations",listFireStations);
         logger.info("Récupération de la liste de caserne");
         return listFireStations;
     }
 
-    @GetMapping("/createFirestation")
-    public String createFirestation(Model model){
-        Firestation firestation = new Firestation();
-        model.addAttribute("firestation", firestation);
-        logger.info("Récupération du formulaire permettant de créer une caserne");
-        return "/form/formNewFirestation";
-    }
-
-    @GetMapping("/deleteFirestation/{id}")
-    public ModelAndView deleteFirestation(@PathVariable("id") final Long id){
-        firestationService.deleteFirestation(id);
-        logger.info("Récupération de la caserne à supprimer " + id);
-        return new ModelAndView("redirect:/firestation");
-    }
-
-    @PostMapping("/saveFirestation")
-    public ModelAndView saveFirestation(@ModelAttribute Firestation firestation){
+    @PostMapping("/firestation")
+    public void saveFirestation(@RequestBody Firestation firestation){
         firestationService.saveFirestation(firestation);
-        logger.info("Sauvegarde des changements sur la caserne en base de données");
-        return new ModelAndView("redirect:/firestation");
+        logger.info("Sauvegarde d'une caserne en base de données");
     }
 
-    @GetMapping("/updateFirestation/{id}")
-    public String updateFirestation(@PathVariable("id") final Long id, Model model){
-        Optional<Firestation> firestation = firestationService.getFirestation(id);
-        model.addAttribute("firestation", firestation);
-        logger.info("Récupération du formulaire permettant la mise à jour d'une caserne");
-        return "/form/formUpdateFirestation";
+    @PutMapping("/firestation/{id}")
+    public Firestation updateFirestation(@PathVariable("id") final Long id, @RequestBody Firestation firestation){
+        logger.info("Mise à jour d'une caserne");
+        return firestationService.saveFirestation(firestation);
     }
 
-    @GetMapping("/firestations{stationNumber}")
-    public String listPersonsCoveredByFirestation(@RequestParam(value = "stationNumber") String station, Model model){
+    @DeleteMapping("/firestation/{id}")
+    public void deleteFirestation(@PathVariable("id") final Long id){
+        logger.info("Récupération de la caserne à supprimer " + id);
+        firestationService.deleteFirestation(id);
+    }
+
+    @GetMapping("/firestations")
+    public HashMap listPersonsCoveredByFirestation(@RequestParam(value = "stationNumber") String station){
         HashMap listPersonsCoveredByFirestation = firestationDAO.getPersonsCoveredByFirestation(station);
-        model.addAttribute("listPersonsCoveredByFirestation", listPersonsCoveredByFirestation);
         logger.info("Récupération des personnes couvertes par le numéro de caserne " + station);
-        return "/personsCoveredByFirestation";
+        return listPersonsCoveredByFirestation;
     }
 
-    @GetMapping("/phoneAlert{firestation}")
-    public String listPersonsPhoneNumberCoveredByFirestationNumber(@RequestParam(value = "firestation") String station, Model model){
+    @GetMapping("/phoneAlert")
+    public List listPersonsPhoneNumberCoveredByFirestationNumber(@RequestParam(value = "firestation") String station){
         List listPersonsPhoneNumberCoveredByFirestationNumber = firestationDAO.getPersonsPhoneNumberCoveredByFirestationNumber(station);
-        model.addAttribute("listPersonsPhoneNumberCoveredByFirestationAddress", listPersonsPhoneNumberCoveredByFirestationNumber);
         logger.info("Récupération des numéros de téléphone des personnes couvertes par la caserne numéro " + station);
-        return "/personsPhoneCoveredByFirestation";
+        return listPersonsPhoneNumberCoveredByFirestationNumber;
     }
 
-    @GetMapping("/fire{address}")
-    public String listPersonsCoveredByFirestationAddress(@RequestParam(value = "address") String address, Model model){
+    @GetMapping("/fire")
+    public List listPersonsCoveredByFirestationAddress(@RequestParam(value = "address") String address){
         List listPersonsAtThisAddressWithStationNumber = firestationDAO.getPersonsCoveredByFirestationAddress(address);
-        model.addAttribute("listPersonsAtThisAddressWithStationNumber", listPersonsAtThisAddressWithStationNumber);
         logger.info("Récupération des personnes vivants à l'adresse " + address + " ainsi que le numéro de la caserne les desservant");
-        return "/personsCoveredByFirestationAddress";
+        return listPersonsAtThisAddressWithStationNumber;
     }
 
-    @GetMapping("/flood/stations{station}")
-    public String personsHomesCoveredByFirestationNumber(@RequestParam(value = "station") String station, Model model){
+    @GetMapping("/flood/stations")
+    public List personsHomesCoveredByFirestationNumber(@RequestParam(value = "station") String station){
         List<HomesInfo> listPersonsHomesCoveredByFirestationNumber = firestationDAO.getPersonsHomesCoveredByFirestationNumber(station);
-        model.addAttribute("listPersonsHomesCoveredByFirestationNumber", listPersonsHomesCoveredByFirestationNumber);
         logger.info("Récupération des personnes couvertes par le numéro de caserne " + station);
-        return "/personsHomesCoveredByFirestationNumber";
+        return listPersonsHomesCoveredByFirestationNumber;
     }
 }

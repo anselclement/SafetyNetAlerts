@@ -21,14 +21,14 @@ public class PersonService {
     @Autowired
     private PersonRepository personRepository;
 
-    public Optional<Person> getPerson(final Long id){
-        logger.info("Récupération de la personne grâce à son id " + id);
-        return personRepository.findById(id);
-    }
-
     public Iterable<Person> getPersons() {
         logger.info("Récupération de la liste entière de personnes");
         return personRepository.findAll();
+    }
+
+    public Optional<Person> getPerson(final Long id){
+        logger.info("Récupération de la personne grâce à son id " + id);
+        return personRepository.findById(id);
     }
 
     public void deleteByLastNameAndFirstName(String lastName, String firstName){

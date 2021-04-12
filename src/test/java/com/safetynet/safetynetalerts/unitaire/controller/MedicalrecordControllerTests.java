@@ -6,16 +6,14 @@ import com.safetynet.safetynetalerts.service.FirestationService;
 import com.safetynet.safetynetalerts.service.MedicalrecordService;
 import com.safetynet.safetynetalerts.service.PersonService;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 @WebMvcTest(controllers = MedicalrecordController.class)
 public class MedicalrecordControllerTests {
@@ -38,34 +36,58 @@ public class MedicalrecordControllerTests {
     @Test
     public void getMedicalrecordsTest() throws Exception{
         mockMvc.perform(get("/medicalrecord"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("medicalrecord"));
+                .andExpect(status().isOk());
     }
 
     @Test
-    public void createMedicalrecordTest() throws Exception{
-        mockMvc.perform(get("/createMedicalrecord"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("/form/formNewMedicalRecord"));
-    }
-    @Test
     public void saveMedicalrecordTest() throws Exception{
-        mockMvc.perform(post("/saveMedicalrecord"))
-                .andExpect(status().is3xxRedirection())
-                .andExpect(view().name("redirect:/medicalrecord"));
+        mockMvc.perform(post("/medicalrecord")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("    {\n" +
+                        "      \"firstName\": \"Clément\",\n" +
+                        "      \"lastName\": \"Ansel\",\n" +
+                        "      \"birthdate\": \"08/14/1991\",\n" +
+                        "      \"medications\": [\n" +
+                        "        \"aznol:350mg\",\n" +
+                        "        \"hydrapermazol:100mg\"\n" +
+                        "      ],\n" +
+                        "      \"allergies\": [\n" +
+                        "        \"nillacilan\"\n" +
+                        "      ]\n" +
+                        "    }"))
+                .andExpect(status().isOk());
     }
 
     @Test
     public void updateMedicalrecordTest() throws Exception{
-        mockMvc.perform(get("/updateMedicalrecord/1"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("/form/formUpdateMedicalRecord"));
+        mockMvc.perform(put("/medicalrecord/1")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("    {\n" +
+                        "      \"id\":\"1\",\n" +
+                        "      \"firstName\": \"Clément\",\n" +
+                        "      \"lastName\": \"Ansel\",\n" +
+                        "      \"birthdate\": \"08/14/1991\",\n" +
+                        "      \"medications\": [\n" +
+                        "        \"aznol:350mg\",\n" +
+                        "        \"hydrapermazol:100mg\"\n" +
+                        "      ],\n" +
+                        "      \"allergies\": [\n" +
+                        "        \"nillacilan\",\n" +
+                        "        \"peanut\"\n" +
+                        "      ]\n" +
+                        "    }"))
+                .andExpect(status().isOk());
     }
 
     @Test
     public void deleteMedicalrecordTest() throws Exception{
-        mockMvc.perform(get("/deleteMedicalrecord/medicalrecordlastname/medicalrecordfirstname"))
-                .andExpect(status().is3xxRedirection())
-                .andExpect(view().name("redirect:/medicalrecord"));
+        mockMvc.perform(delete("/medicalrecord?lastName=ansel&firstName=clément"))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    public void personInfosByLastNameAndFirstNameTest() throws Exception{
+        mockMvc.perform(get("/personInfo?firstName=clément&lastName=ansel"))
+                .andExpect(status().isOk());
     }
 }

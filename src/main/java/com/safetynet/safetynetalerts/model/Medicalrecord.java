@@ -25,7 +25,7 @@ public class Medicalrecord {
     @Column(name = "last_name")
     private String lastName;
 
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(pattern = "MM/dd/yyyy")
     private Date birthdate;
 
     private int age;
@@ -56,5 +56,19 @@ public class Medicalrecord {
     @Generated
     public int hashCode() {
         return Objects.hash(id, firstName, lastName, birthdate, medications, allergies);
+    }
+
+    @Override
+    @Generated
+    public String toString() {
+        return "Medicalrecord{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthdate=" + birthdate +
+                ", age=" + age +
+                ", medications=" + medications +
+                ", allergies=" + allergies +
+                '}';
     }
 }

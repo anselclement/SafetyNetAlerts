@@ -32,6 +32,19 @@ public class PersonServiceTests {
     @InjectMocks
     private PersonService personService;
 
+    @Test
+    public void getPersonsTest(){
+        List<Person> listPerson = new ArrayList<>();
+        listPerson.add(new Person(1L, "person1firstname", "person1lastname", "person1address", "person1city", "person1zip", "person1phone", "person1email"));
+        listPerson.add(new Person(2L, "person2firstname", "person2lastname", "person2address", "person2city", "person2zip", "person2phone", "person2email"));
+        listPerson.add(new Person(3L, "person3firstname", "person3lastname", "person3address", "person3city", "person3zip", "person3phone", "person3email"));
+
+        given(personRepository.findAll()).willReturn(listPerson);
+
+        Iterable<Person> expected = personService.getPersons();
+
+        assertEquals(expected, listPerson);
+    }
 
     @Test
     public void savePersonTest(){
@@ -55,20 +68,6 @@ public class PersonServiceTests {
         final Optional<Person> expected = personService.getPerson(person.getId());
 
         assertThat(expected).isNotNull();
-    }
-
-    @Test
-    public void getPersonsTest(){
-        List<Person> listPerson = new ArrayList<>();
-        listPerson.add(new Person(1L, "person1firstname", "person1lastname", "person1address", "person1city", "person1zip", "person1phone", "person1email"));
-        listPerson.add(new Person(2L, "person2firstname", "person2lastname", "person2address", "person2city", "person2zip", "person2phone", "person2email"));
-        listPerson.add(new Person(3L, "person3firstname", "person3lastname", "person3address", "person3city", "person3zip", "person3phone", "person3email"));
-
-        given(personRepository.findAll()).willReturn(listPerson);
-
-        Iterable<Person> expected = personService.getPersons();
-
-        assertEquals(expected, listPerson);
     }
 
     @Test

@@ -7,18 +7,12 @@ import com.safetynet.safetynetalerts.service.PersonService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Optional;
 
-
-@Controller
+@RestController
 public class PersonController {
 
     private static final Logger logger = LoggerFactory.getLogger(PersonController.class);
@@ -30,56 +24,41 @@ public class PersonController {
     private PersonDAO personDAO;
 
     @GetMapping("/person")
-    public Iterable<Person> getPersons(Model model) {
+    public Iterable<Person> getPersons() {
         Iterable<Person> listPersons = personService.getPersons();
-        model.addAttribute("persons",listPersons);
         logger.info("Récupération de la liste de personne");
         return listPersons;
     }
 
-    @GetMapping("/createPerson")
-    public String createPerson(Model model){
-        Person person = new Person();
-        model.addAttribute("person", person);
-        logger.info("Récupération du formulaire permettant de créer une personne");
-        return "/form/formNewPerson";
-    }
-
-    @PostMapping("/savePerson")
-    public ModelAndView savePerson(@ModelAttribute Person person){
+    @PostMapping("/person")
+    public void addPerson(@RequestBody Person person){
         personService.savePerson(person);
-        logger.info("Sauvegarde des changements sur la personne en base de données");
-        return new ModelAndView("redirect:/person");
+        logger.info("Sauvegarde d'une nouvelle personne en base de données");
     }
 
-    @GetMapping("/updatePerson/{id}")
-    public String updatePerson(@PathVariable("id") final Long id, Model model){
-        Optional<Person> person = personService.getPerson(id);
-        model.addAttribute("person", person);
-        logger.info("Récupération du formulaire permettant la mise à jour d'une personne");
-        return "/form/formUpdatePerson";
+    @PutMapping("/person/{id}")
+    public Person updatePerson(@PathVariable("id") Long id, @RequestBody Person person){
+        logger.info("Mise à jour d'une personne");
+        return personService.savePerson(person);
     }
 
-    @GetMapping("/deletePerson/{lastName}/{firstName}")
-    public ModelAndView deleteByLastnameAndFirstname(@PathVariable("lastName") String lastName, @PathVariable("firstName") String firstName){
+    @DeleteMapping("/person")
+    public void deleteByLastnameAndFirstname(@RequestParam(value = "lastName") String lastName, @RequestParam(value = "firstName") String firstName){
         personService.deleteByLastNameAndFirstName(lastName, firstName);
         logger.info("Récupération de la personne à supprimer " + lastName + " " + firstName);
-        return new ModelAndView("redirect:/person");
     }
 
-    @GetMapping("/communityEmail{city}")
-    public String listPersonsEmailByCity(@RequestParam(value = "city") String city, Model model){
+    @GetMapping("/communityEmail")
+    public List listPersonsEmailByCity(@RequestParam(value = "city") String city){
         List listPersonsEmailByCity = personDAO.getPersonsEmailByCity(city);
-        model.addAttribute("listPersonsEmailByCity", listPersonsEmailByCity);
         logger.info("Récupération de la liste des e-mails de la ville " + city);
-        return "/personsEmailByCity";
+        return listPersonsEmailByCity;
     }
 
-    @GetMapping("/childAlert{address}")
-    public String ChildAtGivenAddressWithMembersOfFamily(@RequestParam(value = "address") String address, Model model){
+    @GetMapping("/childAlert")
+    public HashMap ChildAtGivenAddressWithMembersOfFamily(@RequestParam(value = "address") String address){
         HashMap ChildListAtGivenAddressWithMembersOfFamily = personDAO.getChildAtGivenAddressWithMembersOfFamily(address);
-        model.addAttribute("ChildListAtGivenAddressWithMembersOfFamily", ChildListAtGivenAddressWithMembersOfFamily);
         logger.info("Récupération des enfants vivant à l'adresse " + address);
-        return "/ChildListAtGivenAddress";
+        return ChildListAtGivenAddressWithMembersOfFamily;
     }
 }

@@ -4,11 +4,15 @@ import com.safetynet.safetynetalerts.dao.PersonDAO;
 import com.safetynet.safetynetalerts.model.Person;
 import com.safetynet.safetynetalerts.service.PersonService;
 
+import lombok.var;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.HashMap;
 import java.util.List;
 
@@ -31,21 +35,47 @@ public class PersonController {
     }
 
     @PostMapping("/person")
-    public void addPerson(@RequestBody Person person){
-        personService.savePerson(person);
+    public ResponseEntity<Void> addPerson(@RequestBody Person person){
+        Person personAdded = personService.savePerson(person);
+
+        if(personAdded == null){
+            return ResponseEntity.noContent().build();
+        }
+
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(personAdded.getId())
+                .toUri();
+
         logger.info("Sauvegarde d'une nouvelle personne en base de données");
+
+        return ResponseEntity.created(location).build();
     }
 
     @PutMapping("/person/{id}")
-    public Person updatePerson(@PathVariable("id") Long id, @RequestBody Person person){
+    public ResponseEntity<Void> updatePerson(@PathVariable("id") Long id, @RequestBody Person person){
+        Person personUpdate = personService.savePerson(person);
+
+        if(personUpdate == null){
+            return ResponseEntity.noContent().build();
+        }
+
         logger.info("Mise à jour d'une personne");
-        return personService.savePerson(person);
+
+        return ResponseEntity.ok().build();
     }
 
     @DeleteMapping("/person")
-    public void deleteByLastnameAndFirstname(@RequestParam(value = "lastName") String lastName, @RequestParam(value = "firstName") String firstName){
-        personService.deleteByLastNameAndFirstName(lastName, firstName);
-        logger.info("Récupération de la personne à supprimer " + lastName + " " + firstName);
+    public ResponseEntity<Void> deleteByLastnameAndFirstname(@RequestParam(value = "lastName") String lastName, @RequestParam(value = "firstName") String firstName){
+        try{
+            personService.deleteByLastNameAndFirstName(lastName, firstName);
+            logger.info("Récupération de la personne à supprimer " + lastName + " " + firstName);
+            return ResponseEntity.ok().build();
+        }catch (Exception ex){
+            logger.error("La personne à supprimer n'existe pas");
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @GetMapping("/communityEmail")

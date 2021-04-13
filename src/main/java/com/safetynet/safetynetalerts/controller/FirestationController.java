@@ -7,8 +7,11 @@ import com.safetynet.safetynetalerts.service.FirestationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.HashMap;
 import java.util.List;
 
@@ -32,21 +35,47 @@ public class FirestationController {
     }
 
     @PostMapping("/firestation")
-    public void saveFirestation(@RequestBody Firestation firestation){
-        firestationService.saveFirestation(firestation);
+    public ResponseEntity<Void> saveFirestation(@RequestBody Firestation firestation){
+        Firestation firestationAdded = firestationService.saveFirestation(firestation);
+
+        if(firestationAdded == null){
+            return ResponseEntity.noContent().build();
+        }
+
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(firestationAdded.getId())
+                .toUri();
+
         logger.info("Sauvegarde d'une caserne en base de données");
+
+        return ResponseEntity.created(location).build();
     }
 
     @PutMapping("/firestation/{id}")
-    public Firestation updateFirestation(@PathVariable("id") final Long id, @RequestBody Firestation firestation){
+    public ResponseEntity<Void> updateFirestation(@PathVariable("id") final Long id, @RequestBody Firestation firestation){
+        Firestation firestationUpdate = firestationService.saveFirestation(firestation);
+
+        if (firestationUpdate == null){
+            return ResponseEntity.noContent().build();
+        }
+
         logger.info("Mise à jour d'une caserne");
-        return firestationService.saveFirestation(firestation);
+
+        return ResponseEntity.ok().build();
     }
 
     @DeleteMapping("/firestation/{id}")
-    public void deleteFirestation(@PathVariable("id") final Long id){
-        logger.info("Récupération de la caserne à supprimer " + id);
-        firestationService.deleteFirestation(id);
+    public ResponseEntity<Void> deleteFirestation(@PathVariable("id") final Long id){
+        try{
+            firestationService.deleteFirestation(id);
+            logger.info("Récupération de la caserne à supprimer " + id);
+            return ResponseEntity.ok().build();
+        }catch (Exception ex){
+            logger.error("La caserne à supprimer n'existe pas");
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @GetMapping("/firestations")

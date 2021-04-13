@@ -6,8 +6,11 @@ import com.safetynet.safetynetalerts.service.MedicalrecordService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.HashMap;
 
 @RestController
@@ -29,21 +32,48 @@ public class MedicalrecordController {
     }
 
     @PostMapping("/medicalrecord")
-    public void saveMedicalrecord(@RequestBody Medicalrecord medicalrecord){
-        medicalrecordService.saveMedicalrecord(medicalrecord);
+    public ResponseEntity<Void> saveMedicalrecord(@RequestBody Medicalrecord medicalrecord){
+        Medicalrecord medicalrecordAdded = medicalrecordService.saveMedicalrecord(medicalrecord);
+
+        if(medicalrecordAdded == null){
+            return ResponseEntity.noContent().build();
+        }
+
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(medicalrecordAdded.getId())
+                .toUri();
+
         logger.info("Sauvegarde du dossier médical en base de données");
+
+        return ResponseEntity.created(location).build();
     }
 
     @PutMapping("/medicalrecord/{id}")
-    public Medicalrecord updateMedicalrecord(@PathVariable("id") final Long id, @RequestBody Medicalrecord medicalrecord){
+    public ResponseEntity<Void> updateMedicalrecord(@PathVariable("id") final Long id, @RequestBody Medicalrecord medicalrecord){
+        Medicalrecord medicalRecordUpdate = medicalrecordService.saveMedicalrecord(medicalrecord);
+
+        if(medicalRecordUpdate == null){
+            return ResponseEntity.noContent().build();
+        }
+
         logger.info("Mise à jour d'un dossier médical");
-        return medicalrecordService.saveMedicalrecord(medicalrecord);
+
+        return ResponseEntity.ok().build();
     }
 
     @DeleteMapping("/medicalrecord")
-    public void deleteByLastnameAndFirstname(@RequestParam(value = "lastName") String lastName, @RequestParam(value = "firstName") String firstName){
-        medicalrecordService.deleteByLastNameAndFirstName(lastName, firstName);
-        logger.info("Récupération du dossier médical de la personne à supprimer " + lastName + " " + firstName);
+    public ResponseEntity<Void> deleteByLastnameAndFirstname(@RequestParam(value = "lastName") String lastName, @RequestParam(value = "firstName") String firstName){
+        try{
+            medicalrecordService.deleteByLastNameAndFirstName(lastName, firstName);
+            logger.info("Récupération du dossier médical de la personne à supprimer " + lastName + " " + firstName);
+            return ResponseEntity.ok().build();
+        }catch (Exception ex){
+            logger.error("Le dossier médical à supprimer n'existe pas");
+            return ResponseEntity.notFound().build();
+        }
+
     }
 
     @GetMapping("/personInfo")
